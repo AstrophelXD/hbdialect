@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-Hans-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#edf1ec" />
+    <meta
+      name="description"
+      content="湖北方言数字图谱，以地图浏览《湖北省志·方言》的语音、语汇、语法与地理资料。"
+    />
+    <title>语汇｜湖北方言数字图谱</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#home" data-view-link="home" aria-label="湖北方言数字图谱首页">
+          <span class="brand-seal" aria-hidden="true">湖</span>
+          <span class="brand-copy">
+            <strong>湖北方言数字图谱</strong>
+            <small>Hubei Dialect Atlas</small>
+          </span>
+        </a>
+
+        <nav class="primary-nav" aria-label="主要栏目">
+          <a href="#home" data-view-link="home">首页</a>
+          <a href="#overview" data-view-link="overview">概述</a>
+          <a href="#phonology" data-view-link="phonology">语音</a>
+          <a href="#vocabulary" data-view-link="vocabulary">语汇</a>
+          <a href="#grammar" data-view-link="grammar">语法</a>
+          <a href="#appendix" data-view-link="appendix">附录</a>
+        </nav>
+
+        <span class="site-stage"><i aria-hidden="true"></i>资料整理中</span>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="site-view home-view" id="home" data-view-panel="home" aria-labelledby="home-title" hidden>
+        <div class="home-lead">
+          <div>
+            <p class="section-path">湖北方言数字图谱</p>
+            <h1 id="home-title">从一张地图，进入湖北各地的说法。</h1>
+          </div>
+          <div class="home-intro">
+            <p>
+              本站整理湖北方言的语音、语汇、语法与地理资料。语汇栏目以现行县级区划为入口，
+              展示各地与当前词目对应的方言词形。
+            </p>
+            <a class="text-action" href="#vocabulary" data-view-link="vocabulary">查看语汇地图</a>
+          </div>
+        </div>
+
+        <div class="module-ledger" aria-label="栏目建设状态">
+          <article class="is-open">
+            <span>语汇</span>
+            <h2>词形分布地图</h2>
+            <p>1 个词目，103 个现行区划</p>
+            <a href="#vocabulary" data-view-link="vocabulary">进入地图</a>
+          </article>
+          <article><span>概述</span><h2>湖北方言概览</h2><p>内容待整理</p></article>
+          <article><span>语音</span><h2>声韵调资料</h2><p>内容待整理</p></article>
+          <article><span>语法</span><h2>语法例句</h2><p>内容待整理</p></article>
+          <article><span>附录</span><h2>地点与来源</h2><p>内容待整理</p></article>
+        </div>
+      </section>
+
+      <section class="site-view vocabulary-view" id="vocabulary" data-view-panel="vocabulary" aria-labelledby="map-heading">
+        <section class="atlas-shell" aria-labelledby="map-heading">
+          <div class="atlas-toolbar">
+            <div class="concept-control">
+              <label for="concept-select">当前词目</label>
+              <select id="concept-select" name="concept" aria-label="选择语汇词目">
+                <option value="ben">笨</option>
+              </select>
+            </div>
+
+            <form class="place-search" id="place-search-form" role="search">
+              <label class="sr-only" for="place-search-input">查找现行区县</label>
+              <span class="search-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+              </span>
+              <input
+                id="place-search-input"
+                name="place"
+                type="search"
+                autocomplete="off"
+                placeholder="查找现行区县"
+              />
+              <button type="submit">查找</button>
+              <p class="search-message" id="search-message" aria-live="polite"></p>
+            </form>
+
+            <div class="legend" id="map-legend" aria-label="词形图例"></div>
+          </div>
+
+          <div class="atlas-grid">
+            <section class="map-panel" aria-labelledby="map-heading">
+              <div class="map-heading-row">
+                <div>
+                  <p class="map-caption">现行县级区划</p>
+                  <h2 id="map-heading">湖北词形分布</h2>
+                </div>
+                <p id="map-status">正在读取地图…</p>
+              </div>
+
+              <div class="map-canvas" id="map-canvas">
+                <svg
+                  id="hubei-map"
+                  class="hubei-map"
+                  viewBox="0 0 900 650"
+                  role="group"
+                  aria-label="湖北省语汇词形分布地图。使用方向键切换区划，按回车查看。"
+                >
+                  <text class="map-loading" x="450" y="320" text-anchor="middle">正在读取湖北地图…</text>
+                </svg>
+                <div class="map-tooltip" id="map-tooltip" role="tooltip" hidden></div>
+              </div>
+
+              <div class="map-footnote">
+                <span class="info-icon" aria-hidden="true">i</span>
+                <p>
+                  点击任一现行区划，查看当前词目在该地对应的文献记录；同色区域表示相同词形，条带表示存在多种记录。
+                </p>
+              </div>
+            </section>
+
+            <aside class="detail-panel" aria-labelledby="detail-place">
+              <div class="detail-title">
+                <p>现行区划</p>
+                <h2 id="detail-place">武昌区</h2>
+              </div>
+
+              <div class="form-display">
+                <span>对应词形</span>
+                <strong id="detail-form">苕</strong>
+                <div class="variant-list" id="detail-variants" aria-label="词形变体"></div>
+              </div>
+
+              <dl class="detail-meta">
+                <div><dt>当前词目</dt><dd id="detail-concept">笨</dd></div>
+                <div><dt>来源页</dt><dd id="detail-page">PDF 346 / 印刷页 337</dd></div>
+                <div><dt>资料来源</dt><dd>《湖北省志·方言》语汇部分</dd></div>
+              </dl>
+
+              <p class="detail-caution">
+                保留原书写法；并列形式用斜线分开，不自动合并为单一词形。
+              </p>
+            </aside>
+          </div>
+        </section>
+
+        <p class="dataset-note">
+          资料据《湖北省志·方言》（1996）；页面按现行区划浏览，所示词形为文献记录，不代表今天所有使用者的统一说法。
+        </p>
+      </section>
+
+      <section class="site-view empty-view" id="overview" data-view-panel="overview" aria-labelledby="overview-title" hidden>
+        <p class="section-path">概述</p>
+        <h1 id="overview-title">湖北方言概览</h1>
+        <p>本栏目将说明资料范围、区域分布和阅读方法。</p>
+        <span>内容待整理</span>
+      </section>
+
+      <section class="site-view empty-view" id="phonology" data-view-panel="phonology" aria-labelledby="phonology-title" hidden>
+        <p class="section-path">语音</p>
+        <h1 id="phonology-title">声韵调与语音材料</h1>
+        <p>本栏目将独立整理声母、韵母、声调及语音例字，不以语汇数据代替。</p>
+        <span>内容待整理</span>
+      </section>
+
+      <section class="site-view empty-view" id="grammar" data-view-panel="grammar" aria-labelledby="grammar-title" hidden>
+        <p class="section-path">语法</p>
+        <h1 id="grammar-title">语法现象与例句</h1>
+        <p>本栏目将按语法现象组织例句、地域信息和出处。</p>
+        <span>内容待整理</span>
+      </section>
+
+      <section class="site-view empty-view" id="appendix" data-view-panel="appendix" aria-labelledby="appendix-title" hidden>
+        <p class="section-path">附录</p>
+        <h1 id="appendix-title">地点、来源与方法</h1>
+        <p>本栏目将提供区划信息、资料来源、整理规范与开放数据说明。</p>
+        <span>内容待整理</span>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>湖北方言数字图谱</strong>
+        <p>面向公众的湖北方言资料整理与可视化项目</p>
+      </div>
+      <div class="footer-links">
+        <a href="./docs/README.md">项目文档</a>
+        <a href="./docs/example-frontend/">范例前端</a>
+      </div>
+      <p class="footer-note">地图边界来自项目现有 hubei.geojson；本站不是原书电子版或官方续编。</p>
+    </footer>
+
+    <div class="sr-only" id="selection-announcement" aria-live="polite"></div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

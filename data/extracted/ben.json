@@ -1,0 +1,1511 @@
+{
+  "schema_version": "1.0",
+  "concept": {
+    "id": "ben",
+    "mandarin_label": "笨",
+    "source_column_index": 2,
+    "source_column_scope": "普通话词语列（不含地点列）"
+  },
+  "source": {
+    "source_id": "hubei-province-gazetteer-dialect-1996",
+    "title": "《湖北省志·方言》",
+    "publication_year": 1996,
+    "official_book_id": "257d4a18-b60e-4198-805c-a9715bc270ee",
+    "official_viewer_url": "http://zy.library.hb.cn:8090/dfz/onetable/browse/main.jsp?id=257d4a18-b60e-4198-805c-a9715bc270ee",
+    "requested_pdf_pages": [
+      346,
+      347,
+      348,
+      349
+    ],
+    "printed_pages": [
+      337,
+      338,
+      339,
+      340
+    ],
+    "official_viewer_pages": [
+      363,
+      364,
+      365,
+      366
+    ],
+    "page_files": [
+      {
+        "pdf_page": 346,
+        "printed_page": 337,
+        "official_viewer_page": 363,
+        "sha256": "f0f457c7b7bfbae3ef77f321b071c8b6807637f118aa6980a79d8cfea3c73aa2"
+      },
+      {
+        "pdf_page": 347,
+        "printed_page": 338,
+        "official_viewer_page": 364,
+        "sha256": "11a66e42cba50ac560ffc4d110c9118af08c8bf5e7b5038d0767dcaffa7bfe00"
+      },
+      {
+        "pdf_page": 348,
+        "printed_page": 339,
+        "official_viewer_page": 365,
+        "sha256": "7ab4dbf45d5fc678bc99ecd76c2fc754134ec424bcdb6416042cf0a569320018"
+      },
+      {
+        "pdf_page": 349,
+        "printed_page": 340,
+        "official_viewer_page": 366,
+        "sha256": "cb02414f7e53f00a188ef37625ef4b55cc6059fbe0e571e52efb98bbd2c4eb49"
+      }
+    ],
+    "extraction_method": "pdfplumber 坐标定位表格行；扫描图逐格复核并纠正自定义字体文字层错码",
+    "verification": "75/75 个调查点已按 300-400 dpi 渲染图复核"
+  },
+  "record_count": 75,
+  "region_counts": {
+    "1": 46,
+    "2": 21,
+    "3": 8
+  },
+  "value_counts": {
+    "哈": 1,
+    "妥": 2,
+    "猪": 1,
+    "笨": 14,
+    "笨/苕": 3,
+    "苕": 44,
+    "苕/傻": 1,
+    "苕/猪": 1,
+    "蠢": 8
+  },
+  "records": [
+    {
+      "record_id": "ben-hb-fy-001",
+      "concept_id": "ben",
+      "place_id": "hb-fy-001",
+      "historical_name": "武汉",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 1
+    },
+    {
+      "record_id": "ben-hb-fy-002",
+      "concept_id": "ben",
+      "place_id": "hb-fy-002",
+      "historical_name": "汉川",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 2
+    },
+    {
+      "record_id": "ben-hb-fy-003",
+      "concept_id": "ben",
+      "place_id": "hb-fy-003",
+      "historical_name": "沔阳",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 3
+    },
+    {
+      "record_id": "ben-hb-fy-004",
+      "concept_id": "ben",
+      "place_id": "hb-fy-004",
+      "historical_name": "洪湖",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 4
+    },
+    {
+      "record_id": "ben-hb-fy-005",
+      "concept_id": "ben",
+      "place_id": "hb-fy-005",
+      "historical_name": "天门",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 5
+    },
+    {
+      "record_id": "ben-hb-fy-006",
+      "concept_id": "ben",
+      "place_id": "hb-fy-006",
+      "historical_name": "监利",
+      "dialect_region": 1,
+      "raw_value": "笨/苕",
+      "normalized_value": "笨/苕",
+      "variants": [
+        "笨",
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 6
+    },
+    {
+      "record_id": "ben-hb-fy-007",
+      "concept_id": "ben",
+      "place_id": "hb-fy-007",
+      "historical_name": "京山",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 7
+    },
+    {
+      "record_id": "ben-hb-fy-008",
+      "concept_id": "ben",
+      "place_id": "hb-fy-008",
+      "historical_name": "潜江",
+      "dialect_region": 1,
+      "raw_value": "蠢",
+      "normalized_value": "蠢",
+      "variants": [
+        "蠢"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 8
+    },
+    {
+      "record_id": "ben-hb-fy-009",
+      "concept_id": "ben",
+      "place_id": "hb-fy-009",
+      "historical_name": "钟祥",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 9
+    },
+    {
+      "record_id": "ben-hb-fy-010",
+      "concept_id": "ben",
+      "place_id": "hb-fy-010",
+      "historical_name": "石首",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 10
+    },
+    {
+      "record_id": "ben-hb-fy-011",
+      "concept_id": "ben",
+      "place_id": "hb-fy-011",
+      "historical_name": "荆门",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 11
+    },
+    {
+      "record_id": "ben-hb-fy-012",
+      "concept_id": "ben",
+      "place_id": "hb-fy-012",
+      "historical_name": "沙市",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 12
+    },
+    {
+      "record_id": "ben-hb-fy-013",
+      "concept_id": "ben",
+      "place_id": "hb-fy-013",
+      "historical_name": "江陵",
+      "dialect_region": 1,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 13
+    },
+    {
+      "record_id": "ben-hb-fy-014",
+      "concept_id": "ben",
+      "place_id": "hb-fy-014",
+      "historical_name": "公安",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 14
+    },
+    {
+      "record_id": "ben-hb-fy-015",
+      "concept_id": "ben",
+      "place_id": "hb-fy-015",
+      "historical_name": "松滋",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 15
+    },
+    {
+      "record_id": "ben-hb-fy-016",
+      "concept_id": "ben",
+      "place_id": "hb-fy-016",
+      "historical_name": "随州",
+      "dialect_region": 1,
+      "raw_value": "笨/苕",
+      "normalized_value": "笨/苕",
+      "variants": [
+        "笨",
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 16
+    },
+    {
+      "record_id": "ben-hb-fy-017",
+      "concept_id": "ben",
+      "place_id": "hb-fy-017",
+      "historical_name": "枣阳",
+      "dialect_region": 1,
+      "raw_value": "猪",
+      "normalized_value": "猪",
+      "variants": [
+        "猪"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 17
+    },
+    {
+      "record_id": "ben-hb-fy-018",
+      "concept_id": "ben",
+      "place_id": "hb-fy-018",
+      "historical_name": "襄樊",
+      "dialect_region": 1,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 337,
+      "pdf_page": 346,
+      "official_viewer_page": 363,
+      "review_status": "复核",
+      "source_order": 18
+    },
+    {
+      "record_id": "ben-hb-fy-019",
+      "concept_id": "ben",
+      "place_id": "hb-fy-019",
+      "historical_name": "宜城",
+      "dialect_region": 1,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 19
+    },
+    {
+      "record_id": "ben-hb-fy-020",
+      "concept_id": "ben",
+      "place_id": "hb-fy-020",
+      "historical_name": "南漳",
+      "dialect_region": 1,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 20
+    },
+    {
+      "record_id": "ben-hb-fy-021",
+      "concept_id": "ben",
+      "place_id": "hb-fy-021",
+      "historical_name": "老河口",
+      "dialect_region": 1,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 21
+    },
+    {
+      "record_id": "ben-hb-fy-022",
+      "concept_id": "ben",
+      "place_id": "hb-fy-022",
+      "historical_name": "谷城",
+      "dialect_region": 1,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 22
+    },
+    {
+      "record_id": "ben-hb-fy-023",
+      "concept_id": "ben",
+      "place_id": "hb-fy-023",
+      "historical_name": "保康",
+      "dialect_region": 1,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 23
+    },
+    {
+      "record_id": "ben-hb-fy-024",
+      "concept_id": "ben",
+      "place_id": "hb-fy-024",
+      "historical_name": "当阳",
+      "dialect_region": 1,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 24
+    },
+    {
+      "record_id": "ben-hb-fy-025",
+      "concept_id": "ben",
+      "place_id": "hb-fy-025",
+      "historical_name": "远安",
+      "dialect_region": 1,
+      "raw_value": "笨/苕",
+      "normalized_value": "笨/苕",
+      "variants": [
+        "笨",
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 25
+    },
+    {
+      "record_id": "ben-hb-fy-026",
+      "concept_id": "ben",
+      "place_id": "hb-fy-026",
+      "historical_name": "枝江",
+      "dialect_region": 1,
+      "raw_value": "苕/猪",
+      "normalized_value": "苕/猪",
+      "variants": [
+        "苕",
+        "猪"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 26
+    },
+    {
+      "record_id": "ben-hb-fy-027",
+      "concept_id": "ben",
+      "place_id": "hb-fy-027",
+      "historical_name": "宜昌",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 27
+    },
+    {
+      "record_id": "ben-hb-fy-028",
+      "concept_id": "ben",
+      "place_id": "hb-fy-028",
+      "historical_name": "宜都",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 28
+    },
+    {
+      "record_id": "ben-hb-fy-029",
+      "concept_id": "ben",
+      "place_id": "hb-fy-029",
+      "historical_name": "长阳",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 29
+    },
+    {
+      "record_id": "ben-hb-fy-030",
+      "concept_id": "ben",
+      "place_id": "hb-fy-030",
+      "historical_name": "兴山",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 30
+    },
+    {
+      "record_id": "ben-hb-fy-031",
+      "concept_id": "ben",
+      "place_id": "hb-fy-031",
+      "historical_name": "秭归",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 31
+    },
+    {
+      "record_id": "ben-hb-fy-032",
+      "concept_id": "ben",
+      "place_id": "hb-fy-032",
+      "historical_name": "五峰",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 32
+    },
+    {
+      "record_id": "ben-hb-fy-033",
+      "concept_id": "ben",
+      "place_id": "hb-fy-033",
+      "historical_name": "丹江口",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 33
+    },
+    {
+      "record_id": "ben-hb-fy-034",
+      "concept_id": "ben",
+      "place_id": "hb-fy-034",
+      "historical_name": "郧县",
+      "dialect_region": 1,
+      "raw_value": "蠢",
+      "normalized_value": "蠢",
+      "variants": [
+        "蠢"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 34
+    },
+    {
+      "record_id": "ben-hb-fy-035",
+      "concept_id": "ben",
+      "place_id": "hb-fy-035",
+      "historical_name": "十堰",
+      "dialect_region": 1,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 35
+    },
+    {
+      "record_id": "ben-hb-fy-036",
+      "concept_id": "ben",
+      "place_id": "hb-fy-036",
+      "historical_name": "房县",
+      "dialect_region": 1,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 36
+    },
+    {
+      "record_id": "ben-hb-fy-037",
+      "concept_id": "ben",
+      "place_id": "hb-fy-037",
+      "historical_name": "神农架",
+      "dialect_region": 1,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 37
+    },
+    {
+      "record_id": "ben-hb-fy-038",
+      "concept_id": "ben",
+      "place_id": "hb-fy-038",
+      "historical_name": "郧西",
+      "dialect_region": 1,
+      "raw_value": "蠢",
+      "normalized_value": "蠢",
+      "variants": [
+        "蠢"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 38
+    },
+    {
+      "record_id": "ben-hb-fy-039",
+      "concept_id": "ben",
+      "place_id": "hb-fy-039",
+      "historical_name": "巴东",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 338,
+      "pdf_page": 347,
+      "official_viewer_page": 364,
+      "review_status": "复核",
+      "source_order": 39
+    },
+    {
+      "record_id": "ben-hb-fy-040",
+      "concept_id": "ben",
+      "place_id": "hb-fy-040",
+      "historical_name": "鹤峰",
+      "dialect_region": 1,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 40
+    },
+    {
+      "record_id": "ben-hb-fy-041",
+      "concept_id": "ben",
+      "place_id": "hb-fy-041",
+      "historical_name": "建始",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 41
+    },
+    {
+      "record_id": "ben-hb-fy-042",
+      "concept_id": "ben",
+      "place_id": "hb-fy-042",
+      "historical_name": "恩施",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 42
+    },
+    {
+      "record_id": "ben-hb-fy-043",
+      "concept_id": "ben",
+      "place_id": "hb-fy-043",
+      "historical_name": "宣恩",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 43
+    },
+    {
+      "record_id": "ben-hb-fy-044",
+      "concept_id": "ben",
+      "place_id": "hb-fy-044",
+      "historical_name": "来凤",
+      "dialect_region": 1,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 44
+    },
+    {
+      "record_id": "ben-hb-fy-045",
+      "concept_id": "ben",
+      "place_id": "hb-fy-045",
+      "historical_name": "咸丰",
+      "dialect_region": 1,
+      "raw_value": "哈",
+      "normalized_value": "哈",
+      "variants": [
+        "哈"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 45
+    },
+    {
+      "record_id": "ben-hb-fy-046",
+      "concept_id": "ben",
+      "place_id": "hb-fy-046",
+      "historical_name": "利川",
+      "dialect_region": 1,
+      "raw_value": "蠢",
+      "normalized_value": "蠢",
+      "variants": [
+        "蠢"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 46
+    },
+    {
+      "record_id": "ben-hb-fy-047",
+      "concept_id": "ben",
+      "place_id": "hb-fy-047",
+      "historical_name": "黄梅",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 47
+    },
+    {
+      "record_id": "ben-hb-fy-048",
+      "concept_id": "ben",
+      "place_id": "hb-fy-048",
+      "historical_name": "英山",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 48
+    },
+    {
+      "record_id": "ben-hb-fy-049",
+      "concept_id": "ben",
+      "place_id": "hb-fy-049",
+      "historical_name": "蕲春",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 49
+    },
+    {
+      "record_id": "ben-hb-fy-050",
+      "concept_id": "ben",
+      "place_id": "hb-fy-050",
+      "historical_name": "武穴",
+      "dialect_region": 2,
+      "raw_value": "妥",
+      "normalized_value": "妥",
+      "variants": [
+        "妥"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 50
+    },
+    {
+      "record_id": "ben-hb-fy-051",
+      "concept_id": "ben",
+      "place_id": "hb-fy-051",
+      "historical_name": "罗田",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 51
+    },
+    {
+      "record_id": "ben-hb-fy-052",
+      "concept_id": "ben",
+      "place_id": "hb-fy-052",
+      "historical_name": "浠水",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 52
+    },
+    {
+      "record_id": "ben-hb-fy-053",
+      "concept_id": "ben",
+      "place_id": "hb-fy-053",
+      "historical_name": "黄石",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 53
+    },
+    {
+      "record_id": "ben-hb-fy-054",
+      "concept_id": "ben",
+      "place_id": "hb-fy-054",
+      "historical_name": "麻城",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 54
+    },
+    {
+      "record_id": "ben-hb-fy-055",
+      "concept_id": "ben",
+      "place_id": "hb-fy-055",
+      "historical_name": "黄冈",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 55
+    },
+    {
+      "record_id": "ben-hb-fy-056",
+      "concept_id": "ben",
+      "place_id": "hb-fy-056",
+      "historical_name": "鄂州",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 56
+    },
+    {
+      "record_id": "ben-hb-fy-057",
+      "concept_id": "ben",
+      "place_id": "hb-fy-057",
+      "historical_name": "新洲",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 57
+    },
+    {
+      "record_id": "ben-hb-fy-058",
+      "concept_id": "ben",
+      "place_id": "hb-fy-058",
+      "historical_name": "红安",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 339,
+      "pdf_page": 348,
+      "official_viewer_page": 365,
+      "review_status": "复核",
+      "source_order": 58
+    },
+    {
+      "record_id": "ben-hb-fy-059",
+      "concept_id": "ben",
+      "place_id": "hb-fy-059",
+      "historical_name": "黄陂",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 59
+    },
+    {
+      "record_id": "ben-hb-fy-060",
+      "concept_id": "ben",
+      "place_id": "hb-fy-060",
+      "historical_name": "大悟",
+      "dialect_region": 2,
+      "raw_value": "蠢",
+      "normalized_value": "蠢",
+      "variants": [
+        "蠢"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 60
+    },
+    {
+      "record_id": "ben-hb-fy-061",
+      "concept_id": "ben",
+      "place_id": "hb-fy-061",
+      "historical_name": "孝感",
+      "dialect_region": 2,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 61
+    },
+    {
+      "record_id": "ben-hb-fy-062",
+      "concept_id": "ben",
+      "place_id": "hb-fy-062",
+      "historical_name": "应山",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 62
+    },
+    {
+      "record_id": "ben-hb-fy-063",
+      "concept_id": "ben",
+      "place_id": "hb-fy-063",
+      "historical_name": "安陆",
+      "dialect_region": 2,
+      "raw_value": "蠢",
+      "normalized_value": "蠢",
+      "variants": [
+        "蠢"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 63
+    },
+    {
+      "record_id": "ben-hb-fy-064",
+      "concept_id": "ben",
+      "place_id": "hb-fy-064",
+      "historical_name": "云梦",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 64
+    },
+    {
+      "record_id": "ben-hb-fy-065",
+      "concept_id": "ben",
+      "place_id": "hb-fy-065",
+      "historical_name": "应城",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 65
+    },
+    {
+      "record_id": "ben-hb-fy-066",
+      "concept_id": "ben",
+      "place_id": "hb-fy-066",
+      "historical_name": "竹山",
+      "dialect_region": 2,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 66
+    },
+    {
+      "record_id": "ben-hb-fy-067",
+      "concept_id": "ben",
+      "place_id": "hb-fy-067",
+      "historical_name": "竹溪",
+      "dialect_region": 2,
+      "raw_value": "蠢",
+      "normalized_value": "蠢",
+      "variants": [
+        "蠢"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 67
+    },
+    {
+      "record_id": "ben-hb-fy-068",
+      "concept_id": "ben",
+      "place_id": "hb-fy-068",
+      "historical_name": "阳新",
+      "dialect_region": 3,
+      "raw_value": "妥",
+      "normalized_value": "妥",
+      "variants": [
+        "妥"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 68
+    },
+    {
+      "record_id": "ben-hb-fy-069",
+      "concept_id": "ben",
+      "place_id": "hb-fy-069",
+      "historical_name": "大冶",
+      "dialect_region": 3,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 69
+    },
+    {
+      "record_id": "ben-hb-fy-070",
+      "concept_id": "ben",
+      "place_id": "hb-fy-070",
+      "historical_name": "通山",
+      "dialect_region": 3,
+      "raw_value": "蠢",
+      "normalized_value": "蠢",
+      "variants": [
+        "蠢"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 70
+    },
+    {
+      "record_id": "ben-hb-fy-071",
+      "concept_id": "ben",
+      "place_id": "hb-fy-071",
+      "historical_name": "咸宁",
+      "dialect_region": 3,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 71
+    },
+    {
+      "record_id": "ben-hb-fy-072",
+      "concept_id": "ben",
+      "place_id": "hb-fy-072",
+      "historical_name": "崇阳",
+      "dialect_region": 3,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 72
+    },
+    {
+      "record_id": "ben-hb-fy-073",
+      "concept_id": "ben",
+      "place_id": "hb-fy-073",
+      "historical_name": "嘉鱼",
+      "dialect_region": 3,
+      "raw_value": "苕",
+      "normalized_value": "苕",
+      "variants": [
+        "苕"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 73
+    },
+    {
+      "record_id": "ben-hb-fy-074",
+      "concept_id": "ben",
+      "place_id": "hb-fy-074",
+      "historical_name": "蒲圻",
+      "dialect_region": 3,
+      "raw_value": "苕/傻",
+      "normalized_value": "苕/傻",
+      "variants": [
+        "苕",
+        "傻"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 74
+    },
+    {
+      "record_id": "ben-hb-fy-075",
+      "concept_id": "ben",
+      "place_id": "hb-fy-075",
+      "historical_name": "通城",
+      "dialect_region": 3,
+      "raw_value": "笨",
+      "normalized_value": "笨",
+      "variants": [
+        "笨"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 340,
+      "pdf_page": 349,
+      "official_viewer_page": 366,
+      "review_status": "复核",
+      "source_order": 75
+    }
+  ]
+}

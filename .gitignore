@@ -1,0 +1,41 @@
+# GitHub Pages deployment allowlist.
+# Ignore everything unless it is explicitly required by the published site.
+*
+
+# Repository deployment metadata
+!/.gitignore
+!/.github/
+/.github/*
+!/.github/workflows/
+/.github/workflows/*
+!/.github/workflows/deploy.yml
+
+# Main static frontend
+!/index.html
+!/styles.css
+!/app.js
+!/hubei.geojson
+
+# Runtime font and its required license notice
+!/assets/
+/assets/*
+!/assets/fonts/
+/assets/fonts/*
+!/assets/fonts/SourceHanSerifCN-Prototype.woff2
+!/assets/fonts/LICENSE.txt
+
+# Runtime datasets
+!/data/
+/data/*
+!/data/geography.json
+!/data/extracted/
+/data/extracted/*
+!/data/extracted/ben.json
+
+# Public documentation linked from the site
+!/docs/
+/docs/*
+!/docs/README.md
+
+# Ignore all WOFF2 font files
+*.woff2

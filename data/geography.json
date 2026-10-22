@@ -1,0 +1,1009 @@
+{
+  "schema_version": 1,
+  "geojson": "../hubei.geojson",
+  "join_key": "properties.gb",
+  "order": "gb-ascending",
+  "coverage": {
+    "geojson_features": 103,
+    "mapped_areas": 103,
+    "historical_groups": 75
+  },
+  "mapping_note": "现行县级边界仅用于查找和可视化；历史调查地点映射不代表历史边界，也不表示整个区域的方言完全一致。",
+  "groups": [
+    {
+      "id": "hb-fy-001",
+      "label": "武汉",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-002",
+      "label": "汉川",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-003",
+      "label": "沔阳",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-004",
+      "label": "洪湖",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-005",
+      "label": "天门",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-006",
+      "label": "监利",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-007",
+      "label": "京山",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-008",
+      "label": "潜江",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-009",
+      "label": "钟祥",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-010",
+      "label": "石首",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-011",
+      "label": "荆门",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-012",
+      "label": "沙市",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-013",
+      "label": "江陵",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-014",
+      "label": "公安",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-015",
+      "label": "松滋",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-016",
+      "label": "随州",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-017",
+      "label": "枣阳",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-018",
+      "label": "襄樊",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-019",
+      "label": "宜城",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-020",
+      "label": "南漳",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-021",
+      "label": "老河口",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-022",
+      "label": "谷城",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-023",
+      "label": "保康",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-024",
+      "label": "当阳",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-025",
+      "label": "远安",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-026",
+      "label": "枝江",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-027",
+      "label": "宜昌",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-028",
+      "label": "宜都",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-029",
+      "label": "长阳",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-030",
+      "label": "兴山",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-031",
+      "label": "秭归",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-032",
+      "label": "五峰",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-033",
+      "label": "丹江口",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-034",
+      "label": "郧县",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-035",
+      "label": "十堰",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-036",
+      "label": "房县",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-037",
+      "label": "神农架",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-038",
+      "label": "郧西",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-039",
+      "label": "巴东",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-040",
+      "label": "鹤峰",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-041",
+      "label": "建始",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-042",
+      "label": "恩施",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-043",
+      "label": "宣恩",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-044",
+      "label": "来凤",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-045",
+      "label": "咸丰",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-046",
+      "label": "利川",
+      "dialect_region": 1
+    },
+    {
+      "id": "hb-fy-047",
+      "label": "黄梅",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-048",
+      "label": "英山",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-049",
+      "label": "蕲春",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-050",
+      "label": "武穴",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-051",
+      "label": "罗田",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-052",
+      "label": "浠水",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-053",
+      "label": "黄石",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-054",
+      "label": "麻城",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-055",
+      "label": "黄冈",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-056",
+      "label": "鄂州",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-057",
+      "label": "新洲",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-058",
+      "label": "红安",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-059",
+      "label": "黄陂",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-060",
+      "label": "大悟",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-061",
+      "label": "孝感",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-062",
+      "label": "应山",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-063",
+      "label": "安陆",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-064",
+      "label": "云梦",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-065",
+      "label": "应城",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-066",
+      "label": "竹山",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-067",
+      "label": "竹溪",
+      "dialect_region": 2
+    },
+    {
+      "id": "hb-fy-068",
+      "label": "阳新",
+      "dialect_region": 3
+    },
+    {
+      "id": "hb-fy-069",
+      "label": "大冶",
+      "dialect_region": 3
+    },
+    {
+      "id": "hb-fy-070",
+      "label": "通山",
+      "dialect_region": 3
+    },
+    {
+      "id": "hb-fy-071",
+      "label": "咸宁",
+      "dialect_region": 3
+    },
+    {
+      "id": "hb-fy-072",
+      "label": "崇阳",
+      "dialect_region": 3
+    },
+    {
+      "id": "hb-fy-073",
+      "label": "嘉鱼",
+      "dialect_region": 3
+    },
+    {
+      "id": "hb-fy-074",
+      "label": "蒲圻",
+      "dialect_region": 3
+    },
+    {
+      "id": "hb-fy-075",
+      "label": "通城",
+      "dialect_region": 3
+    }
+  ],
+  "areas": [
+    {
+      "gb": "156420102",
+      "name": "江岸区",
+      "group_id": "hb-fy-001",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420103",
+      "name": "江汉区",
+      "group_id": "hb-fy-001",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420104",
+      "name": "硚口区",
+      "group_id": "hb-fy-001",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420105",
+      "name": "汉阳区",
+      "group_id": "hb-fy-001",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420106",
+      "name": "武昌区",
+      "group_id": "hb-fy-001",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420107",
+      "name": "青山区",
+      "group_id": "hb-fy-001",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420111",
+      "name": "洪山区",
+      "group_id": "hb-fy-001",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420112",
+      "name": "东西湖区",
+      "group_id": "hb-fy-001",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420113",
+      "name": "汉南区",
+      "group_id": "hb-fy-001",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420114",
+      "name": "蔡甸区",
+      "group_id": "hb-fy-001",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420115",
+      "name": "江夏区",
+      "group_id": "hb-fy-001",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420116",
+      "name": "黄陂区",
+      "group_id": "hb-fy-059",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420117",
+      "name": "新洲区",
+      "group_id": "hb-fy-057",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420202",
+      "name": "黄石港区",
+      "group_id": "hb-fy-053",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420203",
+      "name": "西塞山区",
+      "group_id": "hb-fy-053",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420204",
+      "name": "下陆区",
+      "group_id": "hb-fy-053",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420205",
+      "name": "铁山区",
+      "group_id": "hb-fy-053",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420222",
+      "name": "阳新县",
+      "group_id": "hb-fy-068",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420281",
+      "name": "大冶市",
+      "group_id": "hb-fy-069",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420302",
+      "name": "茅箭区",
+      "group_id": "hb-fy-035",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420303",
+      "name": "张湾区",
+      "group_id": "hb-fy-035",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420304",
+      "name": "郧阳区",
+      "group_id": "hb-fy-034",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420322",
+      "name": "郧西县",
+      "group_id": "hb-fy-038",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420323",
+      "name": "竹山县",
+      "group_id": "hb-fy-066",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420324",
+      "name": "竹溪县",
+      "group_id": "hb-fy-067",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420325",
+      "name": "房县",
+      "group_id": "hb-fy-036",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420381",
+      "name": "丹江口市",
+      "group_id": "hb-fy-033",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420502",
+      "name": "西陵区",
+      "group_id": "hb-fy-027",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420503",
+      "name": "伍家岗区",
+      "group_id": "hb-fy-027",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420504",
+      "name": "点军区",
+      "group_id": "hb-fy-027",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420505",
+      "name": "猇亭区",
+      "group_id": "hb-fy-027",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420506",
+      "name": "夷陵区",
+      "group_id": "hb-fy-027",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420525",
+      "name": "远安县",
+      "group_id": "hb-fy-025",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420526",
+      "name": "兴山县",
+      "group_id": "hb-fy-030",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420527",
+      "name": "秭归县",
+      "group_id": "hb-fy-031",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420528",
+      "name": "长阳土家族自治县",
+      "group_id": "hb-fy-029",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420529",
+      "name": "五峰土家族自治县",
+      "group_id": "hb-fy-032",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420581",
+      "name": "宜都市",
+      "group_id": "hb-fy-028",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420582",
+      "name": "当阳市",
+      "group_id": "hb-fy-024",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420583",
+      "name": "枝江市",
+      "group_id": "hb-fy-026",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420602",
+      "name": "襄城区",
+      "group_id": "hb-fy-018",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420606",
+      "name": "樊城区",
+      "group_id": "hb-fy-018",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420607",
+      "name": "襄州区",
+      "group_id": "hb-fy-018",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420624",
+      "name": "南漳县",
+      "group_id": "hb-fy-020",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420625",
+      "name": "谷城县",
+      "group_id": "hb-fy-022",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420626",
+      "name": "保康县",
+      "group_id": "hb-fy-023",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420682",
+      "name": "老河口市",
+      "group_id": "hb-fy-021",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420683",
+      "name": "枣阳市",
+      "group_id": "hb-fy-017",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420684",
+      "name": "宜城市",
+      "group_id": "hb-fy-019",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420702",
+      "name": "梁子湖区",
+      "group_id": "hb-fy-056",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420703",
+      "name": "华容区",
+      "group_id": "hb-fy-056",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420704",
+      "name": "鄂城区",
+      "group_id": "hb-fy-056",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420802",
+      "name": "东宝区",
+      "group_id": "hb-fy-011",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420804",
+      "name": "掇刀区",
+      "group_id": "hb-fy-011",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420822",
+      "name": "沙洋县",
+      "group_id": "hb-fy-011",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420881",
+      "name": "钟祥市",
+      "group_id": "hb-fy-009",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420882",
+      "name": "京山市",
+      "group_id": "hb-fy-007",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420902",
+      "name": "孝南区",
+      "group_id": "hb-fy-061",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420921",
+      "name": "孝昌县",
+      "group_id": "hb-fy-061",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156420922",
+      "name": "大悟县",
+      "group_id": "hb-fy-060",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420923",
+      "name": "云梦县",
+      "group_id": "hb-fy-064",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420981",
+      "name": "应城市",
+      "group_id": "hb-fy-065",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420982",
+      "name": "安陆市",
+      "group_id": "hb-fy-063",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156420984",
+      "name": "汉川市",
+      "group_id": "hb-fy-002",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421002",
+      "name": "沙市区",
+      "group_id": "hb-fy-012",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421003",
+      "name": "荆州区",
+      "group_id": "hb-fy-013",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156421022",
+      "name": "公安县",
+      "group_id": "hb-fy-014",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421024",
+      "name": "江陵县",
+      "group_id": "hb-fy-013",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421081",
+      "name": "石首市",
+      "group_id": "hb-fy-010",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421083",
+      "name": "洪湖市",
+      "group_id": "hb-fy-004",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421087",
+      "name": "松滋市",
+      "group_id": "hb-fy-015",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421088",
+      "name": "监利市",
+      "group_id": "hb-fy-006",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421102",
+      "name": "黄州区",
+      "group_id": "hb-fy-055",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156421121",
+      "name": "团风县",
+      "group_id": "hb-fy-055",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156421122",
+      "name": "红安县",
+      "group_id": "hb-fy-058",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421123",
+      "name": "罗田县",
+      "group_id": "hb-fy-051",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421124",
+      "name": "英山县",
+      "group_id": "hb-fy-048",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421125",
+      "name": "浠水县",
+      "group_id": "hb-fy-052",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421126",
+      "name": "蕲春县",
+      "group_id": "hb-fy-049",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421127",
+      "name": "黄梅县",
+      "group_id": "hb-fy-047",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421181",
+      "name": "麻城市",
+      "group_id": "hb-fy-054",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421182",
+      "name": "武穴市",
+      "group_id": "hb-fy-050",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421202",
+      "name": "咸安区",
+      "group_id": "hb-fy-071",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156421221",
+      "name": "嘉鱼县",
+      "group_id": "hb-fy-073",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421222",
+      "name": "通城县",
+      "group_id": "hb-fy-075",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421223",
+      "name": "崇阳县",
+      "group_id": "hb-fy-072",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421224",
+      "name": "通山县",
+      "group_id": "hb-fy-070",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156421281",
+      "name": "赤壁市",
+      "group_id": "hb-fy-074",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156421303",
+      "name": "曾都区",
+      "group_id": "hb-fy-016",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156421321",
+      "name": "随县",
+      "group_id": "hb-fy-016",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156421381",
+      "name": "广水市",
+      "group_id": "hb-fy-062",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156422801",
+      "name": "恩施市",
+      "group_id": "hb-fy-042",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156422802",
+      "name": "利川市",
+      "group_id": "hb-fy-046",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156422822",
+      "name": "建始县",
+      "group_id": "hb-fy-041",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156422823",
+      "name": "巴东县",
+      "group_id": "hb-fy-039",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156422825",
+      "name": "宣恩县",
+      "group_id": "hb-fy-043",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156422826",
+      "name": "咸丰县",
+      "group_id": "hb-fy-045",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156422827",
+      "name": "来凤县",
+      "group_id": "hb-fy-044",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156422828",
+      "name": "鹤峰县",
+      "group_id": "hb-fy-040",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156429004",
+      "name": "仙桃市",
+      "group_id": "hb-fy-003",
+      "mapping_status": "provisional"
+    },
+    {
+      "gb": "156429005",
+      "name": "潜江市",
+      "group_id": "hb-fy-008",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156429006",
+      "name": "天门市",
+      "group_id": "hb-fy-005",
+      "mapping_status": "direct"
+    },
+    {
+      "gb": "156429021",
+      "name": "神农架林区",
+      "group_id": "hb-fy-037",
+      "mapping_status": "direct"
+    }
+  ]
+}
