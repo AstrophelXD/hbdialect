@@ -3,7 +3,7 @@ name: Deploy website
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 permissions:
@@ -27,28 +27,14 @@ jobs:
           set -euo pipefail
 
           mkdir -p \
-            publish/assets/fonts \
             publish/data/extracted \
-            publish/docs/example-frontend/assets/fonts
+            publish/docs
 
           cp index.html app.js styles.css hubei.geojson publish/
-          cp \
-            assets/fonts/SourceHanSerifCN-Prototype.woff2 \
-            assets/fonts/LICENSE.txt \
-            publish/assets/fonts/
           cp data/geography.json publish/data/
           cp data/extracted/ben.json publish/data/extracted/
           cp docs/README.md publish/docs/
-          cp \
-            docs/example-frontend/index.html \
-            docs/example-frontend/styles.css \
-            docs/example-frontend/app.js \
-            docs/example-frontend/hubei.geojson \
-            publish/docs/example-frontend/
-          cp \
-            docs/example-frontend/assets/fonts/SourceHanSerifCN-Prototype.woff2 \
-            docs/example-frontend/assets/fonts/LICENSE.txt \
-            publish/docs/example-frontend/assets/fonts/
+
           touch publish/.nojekyll
 
       - name: Publish to hbdialect.github.io
