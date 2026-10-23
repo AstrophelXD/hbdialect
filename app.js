@@ -9,7 +9,26 @@ const VIEW_TITLES = {
   appendix: "附录｜湖北方言数字图谱",
 };
 
-const MAP_COLORS = ["#b8d7e6", "#c4d2cb", "#bbd8b2", "#d6d58e", "#d8ddd8"];
+const DEFAULT_MAP_PALETTE_ID = "hubei-administrative-pastel-v1";
+const DEFAULT_COLOR_REFERENCE = Object.freeze({ family: 8, color_index: 2 });
+
+// Presets are intentionally defined in code. Dataset JSON may select a family
+// and a 1-based color index, but it cannot inject arbitrary CSS colors.
+const MAP_COLOR_PRESETS = Object.freeze({
+  "hubei-administrative-pastel-v1": Object.freeze({
+    name: "湖北行政图柔彩",
+    families: Object.freeze({
+      1: Object.freeze(["#e8e4f0", "#d2cce3", "#b8afd2", "#9b8cbe"]),
+      2: Object.freeze(["#f7e5ec", "#f0cbd9", "#e5afc4", "#d58eaa"]),
+      3: Object.freeze(["#e1f0ea", "#c7e3d8", "#a8d2c1", "#83bda7"]),
+      4: Object.freeze(["#e2eef3", "#c9dfe9", "#a9cadb", "#82afc6"]),
+      5: Object.freeze(["#f7f0d5", "#eee2af", "#e1cf83", "#cfb75c"]),
+      6: Object.freeze(["#f8e8d2", "#f2d3aa", "#e6ba7e", "#d5a05b"]),
+      7: Object.freeze(["#ebefd9", "#d8e3b8", "#bed092", "#9fb56e"]),
+      8: Object.freeze(["#eef0ed", "#d9deda", "#c2cbc5", "#a6b2aa"]),
+    }),
+  }),
+});
 
 const state = {
   geojson: null,
@@ -65,27 +84,57 @@ function classificationsFor(rawValue) {
   return [...new Set(splitForms(rawValue).map((form) => classifyForm(form).id))];
 }
 
-function buildCategories(records) {
-  const counts = new Map();
-  records.forEach((record) => {
-    if (!record.raw_value.includes("/")) {
-      counts.set(record.raw_value, (counts.get(record.raw_value) ?? 0) + 1);
-    }
-  });
+function resolveMapColor(reference, paletteId = DEFAULT_MAP_PALETTE_ID) {
+  const palette = MAP_COLOR_PRESETS[paletteId] ?? MAP_COLOR_PRESETS[DEFAULT_MAP_PALETTE_ID];
+  const family = palette.families[reference?.family];
+  const colorIndex = Number(reference?.color_index);
+  if (!family || !Number.isInteger(colorIndex) || colorIndex < 1 || colorIndex > family.length) {
+    const fallbackFamily = palette.families[DEFAULT_COLOR_REFERENCE.family];
+    return fallbackFamily[DEFAULT_COLOR_REFERENCE.color_index - 1];
+  }
+  return family[colorIndex - 1];
+}
 
-  const primaryForms = [...counts.entries()]
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "zh-CN"))
-    .slice(0, 3);
+function buildCategories(dataset) {
+  const usedForms = new Set(
+    dataset.records.flatMap((record) => splitForms(record.raw_value)),
+  );
+  const visualization = dataset.visualization ?? {};
+  const paletteId = visualization.palette_id ?? DEFAULT_MAP_PALETTE_ID;
+  const seenForms = new Set();
+  const configuredCategories = (visualization.color_assignments ?? []).map(
+    (assignment, index) => {
+      const rawValue = String(assignment.value ?? "").trim();
+      if (!rawValue || seenForms.has(rawValue)) {
+        throw new Error(`Invalid or duplicate color assignment: ${rawValue || "(empty)"}`);
+      }
+      seenForms.add(rawValue);
+      return {
+        id: `form-${index}`,
+        label: assignment.label ?? rawValue,
+        rawValue,
+        family: assignment.family,
+        colorIndex: assignment.color_index,
+        color: resolveMapColor(assignment, paletteId),
+      };
+    },
+  );
+  const activeCategories = configuredCategories.filter((category) =>
+    usedForms.has(category.rawValue),
+  );
+  const hasUnassignedForms = [...usedForms].some((form) => !seenForms.has(form));
+  const fallbackReference = visualization.fallback ?? DEFAULT_COLOR_REFERENCE;
 
-  return [
-    ...primaryForms.map(([rawValue], index) => ({
-      id: `form-${index}`,
-      label: rawValue,
-      rawValue,
-      color: MAP_COLORS[index],
-    })),
-    { id: "other", label: "其他", color: MAP_COLORS[4] },
-  ];
+  if (hasUnassignedForms) {
+    activeCategories.push({
+      id: "other",
+      label: fallbackReference.label ?? "其他",
+      family: fallbackReference.family,
+      colorIndex: fallbackReference.color_index,
+      color: resolveMapColor(fallbackReference, paletteId),
+    });
+  }
+  return activeCategories;
 }
 
 function makeSvgElement(name, attributes = {}) {
@@ -247,6 +296,8 @@ function renderLegend() {
     button.type = "button";
     button.className = "legend-button";
     button.dataset.classification = category.id;
+    button.dataset.colorFamily = String(category.family);
+    button.dataset.colorIndex = String(category.colorIndex);
     button.setAttribute("aria-pressed", state.legendFilter === category.id ? "true" : "false");
     button.setAttribute(
       "aria-label",
@@ -284,24 +335,26 @@ function renderMap() {
     const forms = splitForms(rawValue);
     if (forms.length < 2 || patternIds.has(rawValue)) return;
 
-    const colors = forms.map((form) => classifyForm(form).color);
+    const stripeCategories = forms.map((form) => classifyForm(form));
     const patternId = `form-stripes-${patternIds.size}`;
     const stripeWidth = 10;
     const pattern = makeSvgElement("pattern", {
       id: patternId,
-      width: String(stripeWidth * colors.length),
+      width: String(stripeWidth * stripeCategories.length),
       height: "12",
       patternUnits: "userSpaceOnUse",
       patternTransform: "rotate(28)",
     });
-    colors.forEach((color, stripeIndex) => {
+    stripeCategories.forEach((category, stripeIndex) => {
       pattern.append(
         makeSvgElement("rect", {
+          class: "pattern-stripe",
           x: String(stripeIndex * stripeWidth),
           y: "0",
           width: String(stripeWidth),
           height: "12",
-          fill: color,
+          fill: category.color,
+          "data-classification": category.id,
         }),
       );
     });
@@ -383,14 +436,26 @@ function applyLegendFilter() {
       state.legendFilter !== null && !classifications.includes(state.legendFilter),
     );
   });
+  elements.map.querySelectorAll(".pattern-stripe").forEach((stripe) => {
+    stripe.classList.toggle(
+      "is-muted",
+      state.legendFilter !== null && stripe.dataset.classification !== state.legendFilter,
+    );
+  });
 }
 
-function clearMapHighlight() {
-  if (state.highlightedIndex < 0) return;
+function resetMapView() {
+  const hadLegendFilter = state.legendFilter !== null;
+  const hadMapHighlight = state.highlightedIndex >= 0;
+  if (!hadLegendFilter && !hadMapHighlight) return;
+
+  state.legendFilter = null;
   state.highlightedIndex = -1;
+  renderLegend();
   updateMapSelection();
+  applyLegendFilter();
   hideTooltip();
-  elements.announcement.textContent = `已取消地图高亮，右侧仍显示${featureContext(state.selectedIndex)?.area.name ?? "当前区划"}。`;
+  elements.announcement.textContent = `已恢复全部区域显示，右侧仍显示${featureContext(state.selectedIndex)?.area.name ?? "当前区划"}。`;
 }
 
 function showTooltip(event, index) {
@@ -651,7 +716,7 @@ async function loadData() {
     responses.map((response) => response.json()),
   );
   state.features = state.geojson.features ?? [];
-  state.categories = buildCategories(state.dataset.records);
+  state.categories = buildCategories(state.dataset);
   buildIndexes();
   validateCoverage();
 
@@ -697,7 +762,7 @@ async function initialize() {
   initializeSearch();
   elements.mapCanvas.addEventListener("click", (event) => {
     if (event.target === elements.mapCanvas || event.target === elements.map) {
-      clearMapHighlight();
+      resetMapView();
     }
   });
   document.addEventListener("keydown", (event) => {

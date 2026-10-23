@@ -590,7 +590,7 @@ h3 {
   min-height: 610px;
   place-items: center;
   overflow: hidden;
-  background-color: var(--paper-raised);
+  background-color: var(--paper);
 }
 
 .hubei-map {
@@ -660,6 +660,14 @@ h3 {
 
 .region-shape.is-selected.is-muted {
   opacity: 0.7;
+}
+
+.pattern-stripe {
+  transition: opacity var(--motion-fast) var(--ease);
+}
+
+.pattern-stripe.is-muted {
+  opacity: 0.1;
 }
 
 .map-tooltip {

@@ -1,10 +1,55 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "concept": {
     "id": "ben",
     "mandarin_label": "笨",
     "source_column_index": 2,
     "source_column_scope": "普通话词语列（不含地点列）"
+  },
+  "visualization": {
+    "palette_id": "hubei-administrative-pastel-v1",
+    "color_assignments": [
+      {
+        "value": "苕",
+        "family": 1,
+        "color_index": 2
+      },
+      {
+        "value": "笨",
+        "family": 2,
+        "color_index": 2
+      },
+      {
+        "value": "蠢",
+        "family": 3,
+        "color_index": 2
+      },
+      {
+        "value": "妥",
+        "family": 4,
+        "color_index": 2
+      },
+      {
+        "value": "哈",
+        "family": 5,
+        "color_index": 2
+      },
+      {
+        "value": "猪",
+        "family": 6,
+        "color_index": 2
+      },
+      {
+        "value": "傻",
+        "family": 7,
+        "color_index": 2
+      }
+    ],
+    "fallback": {
+      "label": "其他",
+      "family": 8,
+      "color_index": 2
+    }
   },
   "source": {
     "source_id": "hubei-province-gazetteer-dialect-1996",
