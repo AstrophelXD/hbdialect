@@ -24,6 +24,7 @@
 /scripts/*
 !/scripts/build_display_areas.py
 !/scripts/build_admin_boundary.py
+!/scripts/extract_shuijiao_column.py
 
 # Runtime font and its required license notice
 !/assets/
@@ -44,6 +45,7 @@
 !/data/extracted/
 /data/extracted/*
 !/data/extracted/ben.json
+!/data/extracted/shuijiao.json
 
 # Public documentation linked from the site
 !/docs/

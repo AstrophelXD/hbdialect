@@ -11,6 +11,10 @@ const VIEW_TITLES = {
 
 const DEFAULT_MAP_PALETTE_ID = "hubei-administrative-pastel-v1";
 const DEFAULT_COLOR_REFERENCE = Object.freeze({ family: 8, color_index: 2 });
+const DATASET_SOURCES = Object.freeze([
+  Object.freeze({ id: "ben", url: "./data/extracted/ben.json" }),
+  Object.freeze({ id: "shuijiao", url: "./data/extracted/shuijiao.json" }),
+]);
 
 // Presets are intentionally defined in code. Dataset JSON may select a family
 // and a 1-based color index, but it cannot inject arbitrary CSS colors.
@@ -35,6 +39,7 @@ const state = {
   boundaries: null,
   geography: null,
   dataset: null,
+  datasets: new Map(),
   features: [],
   paths: [],
   areaByGb: new Map(),
@@ -701,65 +706,114 @@ function showMapError(error) {
   elements.searchMessage.textContent = "请启动本地服务器后重试。";
 }
 
-async function loadData() {
-  const urls = [
-    "./data/display_areas_simplified.geojson",
-    "./data/admin_boundary.geojson",
-    "./data/geography.json",
-    "./data/extracted/ben.json",
-  ];
-  const responses = await Promise.all(urls.map((url) => fetch(url)));
-  responses.forEach((response, index) => {
-    if (!response.ok) throw new Error(`Failed to load ${urls[index]}: ${response.status}`);
-  });
-  [state.geojson, state.boundaries, state.geography, state.dataset] = await Promise.all(
-    responses.map((response) => response.json()),
-  );
-  state.features = state.geojson.features ?? [];
-  state.categories = buildCategories(state.dataset);
+function loadDatasetFont(dataset) {
+  if (!document.fonts?.load) return;
+  const glyphs = [
+    dataset.concept?.mandarin_label ?? "",
+    ...dataset.records.flatMap((record) => [record.raw_value, record.historical_name]),
+  ].join("");
+  void document.fonts
+    .load('600 1em "Source Han Serif CN Variable"', glyphs)
+    .catch(() => undefined);
+}
+
+function activateDataset(conceptId, options = {}) {
+  const { announce = false } = options;
+  const dataset = state.datasets.get(conceptId);
+  if (!dataset) throw new Error(`Unknown concept dataset: ${conceptId}`);
+
+  state.dataset = dataset;
+  state.categories = buildCategories(dataset);
+  state.legendFilter = null;
   buildIndexes();
   validateCoverage();
 
-  const conceptLabel = state.dataset.concept?.mandarin_label ?? "当前词目";
-  const conceptId = state.dataset.concept?.id ?? "current";
-  elements.conceptSelect.replaceChildren();
-  const conceptOption = document.createElement("option");
-  conceptOption.value = conceptId;
-  conceptOption.textContent = conceptLabel;
-  elements.conceptSelect.append(conceptOption);
+  if (state.selectedIndex < 0 || state.selectedIndex >= state.features.length) {
+    state.selectedIndex = 0;
+  }
+  state.highlightedIndex = state.selectedIndex;
+
+  const conceptLabel = dataset.concept?.mandarin_label ?? "当前词目";
+  elements.conceptSelect.value = conceptId;
   elements.map.setAttribute(
     "aria-label",
     `湖北省${conceptLabel}词形分布地图。使用方向键切换显示区域，按回车查看。`,
   );
+  elements.searchMessage.textContent = "";
+
+  renderLegend();
+  renderMap();
+  updateDetail(state.selectedIndex);
+  loadDatasetFont(dataset);
+
+  if (announce) {
+    const areaName = featureContext(state.selectedIndex)?.area.name ?? "当前区域";
+    elements.announcement.textContent = `已切换到词目${conceptLabel}，地图和右侧说明已更新，当前显示${areaName}。`;
+  }
+}
+
+function initializeConceptSelector() {
+  elements.conceptSelect.addEventListener("change", () => {
+    try {
+      activateDataset(elements.conceptSelect.value, { announce: true });
+    } catch (error) {
+      showMapError(error);
+    }
+  });
+}
+
+async function loadData() {
+  const commonUrls = [
+    "./data/display_areas_simplified.geojson",
+    "./data/admin_boundary.geojson",
+    "./data/geography.json",
+  ];
+  const urls = [...commonUrls, ...DATASET_SOURCES.map((source) => source.url)];
+  const responses = await Promise.all(urls.map((url) => fetch(url)));
+  responses.forEach((response, index) => {
+    if (!response.ok) throw new Error(`Failed to load ${urls[index]}: ${response.status}`);
+  });
+  const payloads = await Promise.all(responses.map((response) => response.json()));
+  [state.geojson, state.boundaries, state.geography] = payloads.slice(0, commonUrls.length);
+  const datasets = payloads.slice(commonUrls.length);
+  state.datasets = new Map(
+    datasets.map((dataset, index) => {
+      const expectedId = DATASET_SOURCES[index].id;
+      const actualId = dataset.concept?.id;
+      if (actualId !== expectedId) {
+        throw new Error(`Concept dataset mismatch: expected ${expectedId}, got ${actualId}`);
+      }
+      return [actualId, dataset];
+    }),
+  );
+  state.features = state.geojson.features ?? [];
+  state.areaByGb = new Map(state.geography.areas.map((area) => [String(area.gb), area]));
+
+  elements.conceptSelect.replaceChildren();
+  DATASET_SOURCES.forEach(({ id }) => {
+    const dataset = state.datasets.get(id);
+    const option = document.createElement("option");
+    option.value = id;
+    option.textContent = dataset.concept?.mandarin_label ?? id;
+    elements.conceptSelect.append(option);
+  });
+
   const customAreaCount = state.features.filter(
     (feature) => feature.properties?.display_level === "custom",
   ).length;
   elements.mapStatus.textContent = `${state.features.length} 个显示区域（${customAreaCount} 个合并市区）`;
 
-  if (document.fonts?.load) {
-    const serifGlyphs = [
-      conceptLabel,
-      ...state.dataset.records.flatMap((record) => [record.raw_value, record.historical_name]),
-    ].join("");
-    void document.fonts
-      .load('600 1em "Source Han Serif CN Variable"', serifGlyphs)
-      .catch(() => undefined);
-  }
-
   const initialIndex = state.features.findIndex((feature) =>
     displayAreaForFeature(feature).memberNames.includes("武昌区"),
   );
   state.selectedIndex = initialIndex >= 0 ? initialIndex : 0;
-  state.highlightedIndex = state.selectedIndex;
-
-  renderLegend();
-  renderMap();
-  updateDetail(state.selectedIndex);
+  activateDataset(DATASET_SOURCES[0].id);
 }
 
 async function initialize() {
   initializeRouting();
   initializeSearch();
+  initializeConceptSelector();
   elements.mapCanvas.addEventListener("click", (event) => {
     if (event.target === elements.mapCanvas || event.target === elements.map) {
       resetMapView();

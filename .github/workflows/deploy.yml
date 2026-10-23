@@ -36,7 +36,10 @@ jobs:
             data/display_areas_simplified.geojson \
             data/admin_boundary.geojson \
             publish/data/
-          cp data/extracted/ben.json publish/data/extracted/
+          cp \
+            data/extracted/ben.json \
+            data/extracted/shuijiao.json \
+            publish/data/extracted/
           cp docs/README.md publish/docs/
 
           touch publish/.nojekyll

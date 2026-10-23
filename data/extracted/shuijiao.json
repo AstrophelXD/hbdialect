@@ -1,0 +1,1553 @@
+{
+  "schema_version": "1.1",
+  "concept": {
+    "id": "shuijiao",
+    "mandarin_label": "睡觉",
+    "source_column_index": 2,
+    "source_column_scope": "普通话词语列（不含地点列）"
+  },
+  "visualization": {
+    "palette_id": "hubei-administrative-pastel-v1",
+    "color_assignments": [
+      {
+        "value": "睡瞌睡",
+        "family": 1,
+        "color_index": 2
+      },
+      {
+        "value": "困醒",
+        "family": 2,
+        "color_index": 2
+      },
+      {
+        "value": "睡觉",
+        "family": 3,
+        "color_index": 2
+      },
+      {
+        "value": "困觉",
+        "family": 4,
+        "color_index": 2
+      },
+      {
+        "value": "睡",
+        "family": 5,
+        "color_index": 2
+      },
+      {
+        "value": "纳福",
+        "family": 6,
+        "color_index": 2
+      },
+      {
+        "value": "困",
+        "family": 7,
+        "color_index": 2
+      }
+    ],
+    "fallback": {
+      "label": "其他",
+      "family": 8,
+      "color_index": 2
+    }
+  },
+  "source": {
+    "source_id": "hubei-province-gazetteer-dialect-1996",
+    "title": "《湖北省志·方言》",
+    "publication_year": 1996,
+    "official_book_id": "257d4a18-b60e-4198-805c-a9715bc270ee",
+    "official_viewer_url": "http://zy.library.hb.cn:8090/dfz/onetable/browse/main.jsp?id=257d4a18-b60e-4198-805c-a9715bc270ee",
+    "requested_pdf_pages": [
+      342,
+      343,
+      344,
+      345
+    ],
+    "printed_pages": [
+      333,
+      334,
+      335,
+      336
+    ],
+    "official_viewer_pages": [
+      359,
+      360,
+      361,
+      362
+    ],
+    "page_files": [
+      {
+        "pdf_page": 342,
+        "printed_page": 333,
+        "official_viewer_page": 359,
+        "sha256": "180eab3da3d7187b33b5ef6c2513ef86a9b873569c65b755cdd886a84eac8f57"
+      },
+      {
+        "pdf_page": 343,
+        "printed_page": 334,
+        "official_viewer_page": 360,
+        "sha256": "b5c44cad8c0f9718ab39d903d8bc0422aacb5ba8dc4e8535fccf764b82385d41"
+      },
+      {
+        "pdf_page": 344,
+        "printed_page": 335,
+        "official_viewer_page": 361,
+        "sha256": "25c375de8a19c10d649beda08946754a93a7cdd7a11be3c3ae41e0dd38e43843"
+      },
+      {
+        "pdf_page": 345,
+        "printed_page": 336,
+        "official_viewer_page": 362,
+        "sha256": "caa85c450ea8b9ae0d8deaa1382773beaa48b80839424012186cb4b310992194"
+      }
+    ],
+    "extraction_method": "pdfplumber 坐标定位表格行；300 dpi 页面逐格复核并纠正自定义字体文字层错码",
+    "verification": "75/75 个调查点已按 300 dpi 渲染图复核"
+  },
+  "record_count": 75,
+  "region_counts": {
+    "1": 46,
+    "2": 21,
+    "3": 8
+  },
+  "value_counts": {
+    "困": 1,
+    "困觉": 3,
+    "困醒": 6,
+    "睡": 1,
+    "睡瞌睡": 57,
+    "睡瞌睡/困觉": 1,
+    "睡觉": 4,
+    "睡觉/睡瞌睡": 1,
+    "纳福": 1
+  },
+  "records": [
+    {
+      "record_id": "shuijiao-hb-fy-001",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-001",
+      "historical_name": "武汉",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 1
+    },
+    {
+      "record_id": "shuijiao-hb-fy-002",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-002",
+      "historical_name": "汉川",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 2
+    },
+    {
+      "record_id": "shuijiao-hb-fy-003",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-003",
+      "historical_name": "沔阳",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 3
+    },
+    {
+      "record_id": "shuijiao-hb-fy-004",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-004",
+      "historical_name": "洪湖",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 4
+    },
+    {
+      "record_id": "shuijiao-hb-fy-005",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-005",
+      "historical_name": "天门",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 5
+    },
+    {
+      "record_id": "shuijiao-hb-fy-006",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-006",
+      "historical_name": "监利",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 6
+    },
+    {
+      "record_id": "shuijiao-hb-fy-007",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-007",
+      "historical_name": "京山",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 7
+    },
+    {
+      "record_id": "shuijiao-hb-fy-008",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-008",
+      "historical_name": "潜江",
+      "dialect_region": 1,
+      "raw_value": "睡觉",
+      "normalized_value": "睡觉",
+      "variants": [
+        "睡觉"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 8
+    },
+    {
+      "record_id": "shuijiao-hb-fy-009",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-009",
+      "historical_name": "钟祥",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 9
+    },
+    {
+      "record_id": "shuijiao-hb-fy-010",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-010",
+      "historical_name": "石首",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 10
+    },
+    {
+      "record_id": "shuijiao-hb-fy-011",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-011",
+      "historical_name": "荆门",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 11
+    },
+    {
+      "record_id": "shuijiao-hb-fy-012",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-012",
+      "historical_name": "沙市",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 12
+    },
+    {
+      "record_id": "shuijiao-hb-fy-013",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-013",
+      "historical_name": "江陵",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 13
+    },
+    {
+      "record_id": "shuijiao-hb-fy-014",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-014",
+      "historical_name": "公安",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 14
+    },
+    {
+      "record_id": "shuijiao-hb-fy-015",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-015",
+      "historical_name": "松滋",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 15
+    },
+    {
+      "record_id": "shuijiao-hb-fy-016",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-016",
+      "historical_name": "随州",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 16
+    },
+    {
+      "record_id": "shuijiao-hb-fy-017",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-017",
+      "historical_name": "枣阳",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 17
+    },
+    {
+      "record_id": "shuijiao-hb-fy-018",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-018",
+      "historical_name": "襄樊",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 333,
+      "pdf_page": 342,
+      "official_viewer_page": 359,
+      "review_status": "复核",
+      "source_order": 18
+    },
+    {
+      "record_id": "shuijiao-hb-fy-019",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-019",
+      "historical_name": "宜城",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 19
+    },
+    {
+      "record_id": "shuijiao-hb-fy-020",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-020",
+      "historical_name": "南漳",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 20
+    },
+    {
+      "record_id": "shuijiao-hb-fy-021",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-021",
+      "historical_name": "老河口",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 21
+    },
+    {
+      "record_id": "shuijiao-hb-fy-022",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-022",
+      "historical_name": "谷城",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 22
+    },
+    {
+      "record_id": "shuijiao-hb-fy-023",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-023",
+      "historical_name": "保康",
+      "dialect_region": 1,
+      "raw_value": "睡",
+      "normalized_value": "睡",
+      "variants": [
+        "睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 23
+    },
+    {
+      "record_id": "shuijiao-hb-fy-024",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-024",
+      "historical_name": "当阳",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 24
+    },
+    {
+      "record_id": "shuijiao-hb-fy-025",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-025",
+      "historical_name": "远安",
+      "dialect_region": 1,
+      "raw_value": "睡觉/睡瞌睡",
+      "normalized_value": "睡觉/睡瞌睡",
+      "variants": [
+        "睡觉",
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 25
+    },
+    {
+      "record_id": "shuijiao-hb-fy-026",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-026",
+      "historical_name": "枝江",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 26
+    },
+    {
+      "record_id": "shuijiao-hb-fy-027",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-027",
+      "historical_name": "宜昌",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 27
+    },
+    {
+      "record_id": "shuijiao-hb-fy-028",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-028",
+      "historical_name": "宜都",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 28
+    },
+    {
+      "record_id": "shuijiao-hb-fy-029",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-029",
+      "historical_name": "长阳",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 29
+    },
+    {
+      "record_id": "shuijiao-hb-fy-030",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-030",
+      "historical_name": "兴山",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 30
+    },
+    {
+      "record_id": "shuijiao-hb-fy-031",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-031",
+      "historical_name": "秭归",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 31
+    },
+    {
+      "record_id": "shuijiao-hb-fy-032",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-032",
+      "historical_name": "五峰",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 32
+    },
+    {
+      "record_id": "shuijiao-hb-fy-033",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-033",
+      "historical_name": "丹江口",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 33
+    },
+    {
+      "record_id": "shuijiao-hb-fy-034",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-034",
+      "historical_name": "郧县",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 34
+    },
+    {
+      "record_id": "shuijiao-hb-fy-035",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-035",
+      "historical_name": "十堰",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 35
+    },
+    {
+      "record_id": "shuijiao-hb-fy-036",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-036",
+      "historical_name": "房县",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 36
+    },
+    {
+      "record_id": "shuijiao-hb-fy-037",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-037",
+      "historical_name": "神农架",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 37
+    },
+    {
+      "record_id": "shuijiao-hb-fy-038",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-038",
+      "historical_name": "郧西",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 38
+    },
+    {
+      "record_id": "shuijiao-hb-fy-039",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-039",
+      "historical_name": "巴东",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 334,
+      "pdf_page": 343,
+      "official_viewer_page": 360,
+      "review_status": "复核",
+      "source_order": 39
+    },
+    {
+      "record_id": "shuijiao-hb-fy-040",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-040",
+      "historical_name": "鹤峰",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 40
+    },
+    {
+      "record_id": "shuijiao-hb-fy-041",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-041",
+      "historical_name": "建始",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 41
+    },
+    {
+      "record_id": "shuijiao-hb-fy-042",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-042",
+      "historical_name": "恩施",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 42
+    },
+    {
+      "record_id": "shuijiao-hb-fy-043",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-043",
+      "historical_name": "宣恩",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 43
+    },
+    {
+      "record_id": "shuijiao-hb-fy-044",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-044",
+      "historical_name": "来凤",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 44
+    },
+    {
+      "record_id": "shuijiao-hb-fy-045",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-045",
+      "historical_name": "咸丰",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 45
+    },
+    {
+      "record_id": "shuijiao-hb-fy-046",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-046",
+      "historical_name": "利川",
+      "dialect_region": 1,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 46
+    },
+    {
+      "record_id": "shuijiao-hb-fy-047",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-047",
+      "historical_name": "黄梅",
+      "dialect_region": 2,
+      "raw_value": "困醒",
+      "normalized_value": "困醒",
+      "variants": [
+        "困醒"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 47
+    },
+    {
+      "record_id": "shuijiao-hb-fy-048",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-048",
+      "historical_name": "英山",
+      "dialect_region": 2,
+      "raw_value": "困醒",
+      "normalized_value": "困醒",
+      "variants": [
+        "困醒"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 48
+    },
+    {
+      "record_id": "shuijiao-hb-fy-049",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-049",
+      "historical_name": "蕲春",
+      "dialect_region": 2,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 49
+    },
+    {
+      "record_id": "shuijiao-hb-fy-050",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-050",
+      "historical_name": "武穴",
+      "dialect_region": 2,
+      "raw_value": "困醒",
+      "normalized_value": "困醒",
+      "variants": [
+        "困醒"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 50
+    },
+    {
+      "record_id": "shuijiao-hb-fy-051",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-051",
+      "historical_name": "罗田",
+      "dialect_region": 2,
+      "raw_value": "睡觉",
+      "normalized_value": "睡觉",
+      "variants": [
+        "睡觉"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 51
+    },
+    {
+      "record_id": "shuijiao-hb-fy-052",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-052",
+      "historical_name": "浠水",
+      "dialect_region": 2,
+      "raw_value": "困醒",
+      "normalized_value": "困醒",
+      "variants": [
+        "困醒"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 52
+    },
+    {
+      "record_id": "shuijiao-hb-fy-053",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-053",
+      "historical_name": "黄石",
+      "dialect_region": 2,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 53
+    },
+    {
+      "record_id": "shuijiao-hb-fy-054",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-054",
+      "historical_name": "麻城",
+      "dialect_region": 2,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 54
+    },
+    {
+      "record_id": "shuijiao-hb-fy-055",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-055",
+      "historical_name": "黄冈",
+      "dialect_region": 2,
+      "raw_value": "困觉",
+      "normalized_value": "困觉",
+      "variants": [
+        "困觉"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 55
+    },
+    {
+      "record_id": "shuijiao-hb-fy-056",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-056",
+      "historical_name": "鄂州",
+      "dialect_region": 2,
+      "raw_value": "睡觉",
+      "normalized_value": "睡觉",
+      "variants": [
+        "睡觉"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 56
+    },
+    {
+      "record_id": "shuijiao-hb-fy-057",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-057",
+      "historical_name": "新洲",
+      "dialect_region": 2,
+      "raw_value": "纳福",
+      "normalized_value": "纳福",
+      "variants": [
+        "纳福"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 57
+    },
+    {
+      "record_id": "shuijiao-hb-fy-058",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-058",
+      "historical_name": "红安",
+      "dialect_region": 2,
+      "raw_value": "睡瞌睡/困觉",
+      "normalized_value": "睡瞌睡/困觉",
+      "variants": [
+        "睡瞌睡",
+        "困觉"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 335,
+      "pdf_page": 344,
+      "official_viewer_page": 361,
+      "review_status": "复核",
+      "source_order": 58
+    },
+    {
+      "record_id": "shuijiao-hb-fy-059",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-059",
+      "historical_name": "黄陂",
+      "dialect_region": 2,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 59
+    },
+    {
+      "record_id": "shuijiao-hb-fy-060",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-060",
+      "historical_name": "大悟",
+      "dialect_region": 2,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 60
+    },
+    {
+      "record_id": "shuijiao-hb-fy-061",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-061",
+      "historical_name": "孝感",
+      "dialect_region": 2,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 61
+    },
+    {
+      "record_id": "shuijiao-hb-fy-062",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-062",
+      "historical_name": "应山",
+      "dialect_region": 2,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 62
+    },
+    {
+      "record_id": "shuijiao-hb-fy-063",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-063",
+      "historical_name": "安陆",
+      "dialect_region": 2,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 63
+    },
+    {
+      "record_id": "shuijiao-hb-fy-064",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-064",
+      "historical_name": "云梦",
+      "dialect_region": 2,
+      "raw_value": "困觉",
+      "normalized_value": "困觉",
+      "variants": [
+        "困觉"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 64
+    },
+    {
+      "record_id": "shuijiao-hb-fy-065",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-065",
+      "historical_name": "应城",
+      "dialect_region": 2,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 65
+    },
+    {
+      "record_id": "shuijiao-hb-fy-066",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-066",
+      "historical_name": "竹山",
+      "dialect_region": 2,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 66
+    },
+    {
+      "record_id": "shuijiao-hb-fy-067",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-067",
+      "historical_name": "竹溪",
+      "dialect_region": 2,
+      "raw_value": "睡觉",
+      "normalized_value": "睡觉",
+      "variants": [
+        "睡觉"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 67
+    },
+    {
+      "record_id": "shuijiao-hb-fy-068",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-068",
+      "historical_name": "阳新",
+      "dialect_region": 3,
+      "raw_value": "困",
+      "normalized_value": "困",
+      "variants": [
+        "困"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 68
+    },
+    {
+      "record_id": "shuijiao-hb-fy-069",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-069",
+      "historical_name": "大冶",
+      "dialect_region": 3,
+      "raw_value": "困醒",
+      "normalized_value": "困醒",
+      "variants": [
+        "困醒"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 69
+    },
+    {
+      "record_id": "shuijiao-hb-fy-070",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-070",
+      "historical_name": "通山",
+      "dialect_region": 3,
+      "raw_value": "困醒",
+      "normalized_value": "困醒",
+      "variants": [
+        "困醒"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 70
+    },
+    {
+      "record_id": "shuijiao-hb-fy-071",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-071",
+      "historical_name": "咸宁",
+      "dialect_region": 3,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 71
+    },
+    {
+      "record_id": "shuijiao-hb-fy-072",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-072",
+      "historical_name": "崇阳",
+      "dialect_region": 3,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 72
+    },
+    {
+      "record_id": "shuijiao-hb-fy-073",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-073",
+      "historical_name": "嘉鱼",
+      "dialect_region": 3,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 73
+    },
+    {
+      "record_id": "shuijiao-hb-fy-074",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-074",
+      "historical_name": "蒲圻",
+      "dialect_region": 3,
+      "raw_value": "睡瞌睡",
+      "normalized_value": "睡瞌睡",
+      "variants": [
+        "睡瞌睡"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 74
+    },
+    {
+      "record_id": "shuijiao-hb-fy-075",
+      "concept_id": "shuijiao",
+      "place_id": "hb-fy-075",
+      "historical_name": "通城",
+      "dialect_region": 3,
+      "raw_value": "困觉",
+      "normalized_value": "困觉",
+      "variants": [
+        "困觉"
+      ],
+      "notation_type": "汉字",
+      "source_id": "hubei-province-gazetteer-dialect-1996",
+      "printed_page": 336,
+      "pdf_page": 345,
+      "official_viewer_page": 362,
+      "review_status": "复核",
+      "source_order": 75
+    }
+  ]
+}
