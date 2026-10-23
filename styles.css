@@ -20,6 +20,9 @@
   --ink-faint: #5f6d66;
   --line: #c4cec6;
   --line-strong: #98a79d;
+  --map-boundary-county: #aab8b3;
+  --map-boundary-city: #87978f;
+  --map-boundary-province: #65776f;
   --river: #2f6a60;
   --river-dark: #204d46;
   --lacquer: #934a43;
@@ -272,8 +275,7 @@ h3 {
   padding-inline: var(--gutter);
 }
 
-.section-path,
-.map-caption {
+.section-path {
   color: var(--lacquer);
   font-size: 0.73rem;
   font-weight: 700;
@@ -392,16 +394,6 @@ h3 {
   border-top: 1px solid var(--ink);
 }
 
-.atlas-toolbar {
-  display: grid;
-  grid-template-columns: minmax(150px, 210px) minmax(300px, 420px) minmax(0, 1fr);
-  align-items: center;
-  gap: clamp(20px, 2.5vw, 36px);
-  min-height: 96px;
-  padding-block: 20px;
-  border-bottom: 1px solid var(--line-strong);
-}
-
 .concept-control {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
@@ -511,11 +503,23 @@ h3 {
   gap: 8px 14px;
 }
 
+.map-legend-overlay {
+  position: absolute;
+  z-index: 3;
+  top: 18px;
+  right: 20px;
+  max-width: calc(100% - 40px);
+  padding: 4px 6px;
+  border: 1px solid color-mix(in srgb, var(--line-strong) 68%, transparent);
+  background: color-mix(in srgb, var(--paper-raised) 90%, transparent);
+  backdrop-filter: blur(8px);
+}
+
 .legend-button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  min-height: 40px;
+  min-height: 44px;
   padding: 4px 8px;
   border: 1px solid transparent;
   background: transparent;
@@ -557,25 +561,27 @@ h3 {
 }
 
 .map-heading-row {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 24px;
-  min-height: 112px;
+  display: grid;
+  grid-template-columns: auto minmax(480px, 1fr);
+  align-items: center;
+  gap: clamp(28px, 3vw, 56px);
+  min-height: 116px;
   padding: 26px 30px 22px 0;
   border-bottom: 1px solid var(--line);
 }
 
 .map-heading-row h2 {
-  margin-top: 8px;
+  margin: 0;
   font-size: clamp(1.6rem, 2.2vw, 2.35rem);
+  white-space: nowrap;
 }
 
-#map-status {
-  color: var(--ink-faint);
-  font-size: 0.77rem;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
+.map-heading-tools {
+  display: grid;
+  grid-template-columns: minmax(150px, 210px) minmax(280px, 420px);
+  justify-content: end;
+  gap: clamp(18px, 2.4vw, 34px);
+  min-width: 0;
 }
 
 .map-canvas {
@@ -601,13 +607,35 @@ h3 {
 }
 
 .region-shape {
-  stroke: #aebbb5;
-  stroke-width: 0.7;
-  vector-effect: non-scaling-stroke;
+  stroke: none;
   cursor: pointer;
   transition:
     opacity var(--motion-fast) var(--ease),
     filter var(--motion-fast) var(--ease);
+}
+
+.admin-boundary {
+  pointer-events: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.admin-boundary--county {
+  stroke: var(--map-boundary-county);
+  stroke-width: 0.55;
+  opacity: 0.9;
+}
+
+.admin-boundary--city {
+  stroke: var(--map-boundary-city);
+  stroke-width: 1.15;
+  stroke-dasharray: 4.5 2.25;
+}
+
+.admin-boundary--province {
+  stroke: var(--map-boundary-province);
+  stroke-width: 1.8;
 }
 
 .region-shape:hover,
@@ -870,20 +898,23 @@ h3 {
     display: none;
   }
 
-  .atlas-toolbar {
-    grid-template-columns: minmax(150px, 210px) minmax(0, 1fr);
+  .map-heading-row {
+    grid-template-columns: 1fr;
+    align-items: start;
     gap: 18px;
-    padding-bottom: 24px;
+  }
+
+  .map-heading-tools {
+    grid-template-columns: minmax(150px, 210px) minmax(0, 1fr);
+    justify-content: stretch;
+    gap: 18px;
+    width: 100%;
   }
 
   .place-search {
     max-width: none;
   }
 
-  .legend {
-    grid-column: 1 / -1;
-    justify-content: flex-start;
-  }
 }
 
 @media (max-width: 960px) {
@@ -1025,20 +1056,24 @@ h3 {
     padding-top: 24px;
   }
 
-  .atlas-toolbar {
+  .map-heading-tools {
     grid-template-columns: 1fr;
-    min-height: 0;
+    gap: 12px;
   }
 
-  .legend {
+  .map-legend-overlay {
+    top: 12px;
+    right: 12px;
+    left: 12px;
     flex-wrap: nowrap;
-    margin-inline: calc(var(--gutter) * -1);
-    padding-inline: var(--gutter);
+    justify-content: flex-start;
+    max-width: none;
+    padding: 4px;
     overflow-x: auto;
     scrollbar-width: none;
   }
 
-  .legend::-webkit-scrollbar {
+  .map-legend-overlay::-webkit-scrollbar {
     display: none;
   }
 
@@ -1048,8 +1083,6 @@ h3 {
   }
 
   .map-heading-row {
-    align-items: flex-start;
-    flex-direction: column;
     min-height: 0;
     padding-block: 22px;
   }

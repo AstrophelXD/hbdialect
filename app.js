@@ -13,6 +13,7 @@ const MAP_COLORS = ["#b8d7e6", "#c4d2cb", "#bbd8b2", "#d6d58e", "#d8ddd8"];
 
 const state = {
   geojson: null,
+  boundaries: null,
   geography: null,
   dataset: null,
   features: [],
@@ -38,6 +39,7 @@ const elements = {
   searchInput: document.querySelector("#place-search-input"),
   searchMessage: document.querySelector("#search-message"),
   detailPlace: document.querySelector("#detail-place"),
+  detailPrefecture: document.querySelector("#detail-prefecture"),
   detailForm: document.querySelector("#detail-form"),
   detailVariants: document.querySelector("#detail-variants"),
   detailConcept: document.querySelector("#detail-concept"),
@@ -157,14 +159,84 @@ function geometryToPath(geometry, project) {
   return "";
 }
 
+function lineGeometryToPath(geometry, project) {
+  if (!geometry) return "";
+  const lineToPath = (line) =>
+    line
+      .map((point, index) => {
+        const [x, y] = project(point);
+        return `${index === 0 ? "M" : "L"}${x.toFixed(2)} ${y.toFixed(2)}`;
+      })
+      .join("");
+
+  if (geometry.type === "LineString") return lineToPath(geometry.coordinates);
+  if (geometry.type === "MultiLineString") {
+    return geometry.coordinates.map(lineToPath).join("");
+  }
+  return "";
+}
+
+function uniqueValues(values) {
+  return [...new Set(values.filter((value) => value !== null && value !== undefined))];
+}
+
+function displayAreaForFeature(feature) {
+  const properties = feature?.properties ?? {};
+  const memberGbs = (properties.member_gbs ?? [properties.gb])
+    .filter((gb) => gb !== null && gb !== undefined)
+    .map(String);
+  const mappedMembers = memberGbs
+    .map((gb) => state.areaByGb.get(gb))
+    .filter(Boolean);
+  const memberNames = properties.member_names ?? mappedMembers.map((area) => area.name);
+  const groupIds = properties.group_ids ?? mappedMembers.map((area) => area.group_id);
+
+  return {
+    id: String(properties.display_id ?? properties.gb ?? ""),
+    name: String(properties.display_name ?? mappedMembers[0]?.name ?? ""),
+    level: String(properties.display_level ?? "county"),
+    prefectureName: String(properties.prefecture_name ?? ""),
+    memberGbs,
+    memberNames: memberNames.map(String),
+    groupIds: uniqueValues(groupIds.map(String)),
+  };
+}
+
+function aggregateRecords(records) {
+  const forms = uniqueValues(records.flatMap((record) => splitForms(record.raw_value)));
+  const variants = uniqueValues(records.flatMap((record) => record.variants ?? []));
+  const sourcePages = records.map(
+    (record) =>
+      `${record.historical_name}：PDF ${record.pdf_page} / 印刷页 ${record.printed_page}`,
+  );
+
+  return {
+    raw_value: forms.join("/"),
+    variants,
+    pageLabel:
+      records.length === 1
+        ? `PDF ${records[0].pdf_page} / 印刷页 ${records[0].printed_page}`
+        : sourcePages.join("；"),
+  };
+}
+
 function featureContext(index) {
   const feature = state.features[index];
   if (!feature) return null;
-  const area = state.areaByGb.get(String(feature.properties?.gb ?? ""));
-  if (!area) return null;
-  const record = state.recordByGroupId.get(area.group_id);
-  if (!record) return null;
-  return { feature, area, record };
+  const area = displayAreaForFeature(feature);
+  const records = area.groupIds
+    .map((groupId) => state.recordByGroupId.get(groupId))
+    .filter(Boolean);
+  if (
+    !area.id ||
+    !area.name ||
+    !area.prefectureName ||
+    !records.length ||
+    records.length !== area.groupIds.length
+  ) {
+    return null;
+  }
+  return { feature, area, records, record: aggregateRecords(records) };
 }
 
 function renderLegend() {
@@ -207,9 +279,10 @@ function renderMap() {
 
   const defs = makeSvgElement("defs");
   const patternIds = new Map();
-  state.dataset.records.forEach((record) => {
-    const forms = splitForms(record.raw_value);
-    if (forms.length < 2 || patternIds.has(record.raw_value)) return;
+  state.features.forEach((_, index) => {
+    const rawValue = featureContext(index)?.record.raw_value;
+    const forms = splitForms(rawValue);
+    if (forms.length < 2 || patternIds.has(rawValue)) return;
 
     const colors = forms.map((form) => classifyForm(form).color);
     const patternId = `form-stripes-${patternIds.size}`;
@@ -233,7 +306,7 @@ function renderMap() {
       );
     });
     defs.append(pattern);
-    patternIds.set(record.raw_value, patternId);
+    patternIds.set(rawValue, patternId);
   });
 
   const regionsLayer = makeSvgElement("g", { class: "regions-layer" });
@@ -270,7 +343,26 @@ function renderMap() {
     regionsLayer.append(path);
   });
 
-  elements.map.append(defs, regionsLayer);
+  const boundariesLayer = makeSvgElement("g", {
+    class: "admin-boundaries-layer",
+    "aria-hidden": "true",
+  });
+  const boundaryByLevel = new Map(
+    (state.boundaries?.features ?? []).map((feature) => [feature.properties?.level, feature]),
+  );
+  ["county", "city", "province"].forEach((level) => {
+    const feature = boundaryByLevel.get(level);
+    if (!feature) return;
+    boundariesLayer.append(
+      makeSvgElement("path", {
+        d: lineGeometryToPath(feature.geometry, project),
+        class: `admin-boundary admin-boundary--${level}`,
+        fill: "none",
+      }),
+    );
+  });
+
+  elements.map.append(defs, regionsLayer, boundariesLayer);
   applyLegendFilter();
 }
 
@@ -341,10 +433,11 @@ function updateDetail(index, announce = false) {
   if (!context) return;
   const { area, record } = context;
 
+  elements.detailPrefecture.textContent = area.prefectureName;
   elements.detailPlace.textContent = area.name;
   elements.detailForm.textContent = record.raw_value;
   elements.detailConcept.textContent = state.dataset.concept?.mandarin_label ?? "当前词目";
-  elements.detailPage.textContent = `PDF ${record.pdf_page} / 印刷页 ${record.printed_page}`;
+  elements.detailPage.textContent = record.pageLabel;
 
   elements.detailVariants.replaceChildren();
   record.variants.forEach((variant) => {
@@ -413,14 +506,18 @@ function searchPlace(query) {
   if (!normalized) return -1;
 
   const exactArea = state.features.findIndex((feature) => {
-    const area = state.areaByGb.get(String(feature.properties?.gb ?? ""));
-    return normalizeSearchText(area?.name) === normalized;
+    const area = displayAreaForFeature(feature);
+    return [area.name, ...area.memberNames].some(
+      (name) => normalizeSearchText(name) === normalized,
+    );
   });
   if (exactArea >= 0) return exactArea;
 
-  return state.features.findIndex((_, index) => {
-    const context = featureContext(index);
-    return normalizeSearchText(context?.area.name).includes(normalized);
+  return state.features.findIndex((feature) => {
+    const area = displayAreaForFeature(feature);
+    return [area.name, ...area.memberNames].some((name) =>
+      normalizeSearchText(name).includes(normalized),
+    );
   });
 }
 
@@ -430,7 +527,7 @@ function initializeSearch() {
     const query = elements.searchInput.value.trim();
 
     if (!query) {
-      elements.searchMessage.textContent = "请输入现行区县名称。";
+      elements.searchMessage.textContent = "请输入显示区域或现行区县名称。";
       elements.searchInput.focus();
       return;
     }
@@ -484,15 +581,42 @@ function buildIndexes() {
 }
 
 function validateCoverage() {
-  const missingAreas = state.features.filter(
-    (feature) => !state.areaByGb.has(String(feature.properties?.gb ?? "")),
+  const coveredGbs = state.features.flatMap(
+    (feature) => displayAreaForFeature(feature).memberGbs,
+  );
+  const missingAreas = coveredGbs.filter((gb) => !state.areaByGb.has(gb));
+  const duplicateAreas = coveredGbs.filter((gb, index) => coveredGbs.indexOf(gb) !== index);
+  const uncoveredAreas = state.geography.areas.filter(
+    (area) => !coveredGbs.includes(String(area.gb)),
   );
   const missingRecords = state.geography.groups.filter(
     (group) => !state.recordByGroupId.has(group.id),
   );
-  if (missingAreas.length || missingRecords.length) {
+  const invalidFeatures = state.features.filter((_, index) => !featureContext(index));
+  const boundaryLevels = new Set(
+    (state.boundaries?.features ?? []).map((feature) => feature.properties?.level),
+  );
+  const invalidBoundaryFeatures = (state.boundaries?.features ?? []).filter(
+    (feature) => !["LineString", "MultiLineString"].includes(feature.geometry?.type),
+  );
+  const missingBoundaryLevels = ["county", "city", "province"].filter(
+    (level) => !boundaryLevels.has(level),
+  );
+  if (
+    missingAreas.length ||
+    duplicateAreas.length ||
+    uncoveredAreas.length ||
+    missingRecords.length ||
+    invalidFeatures.length ||
+    invalidBoundaryFeatures.length ||
+    missingBoundaryLevels.length
+  ) {
     throw new Error(
-      `Data coverage error: ${missingAreas.length} areas and ${missingRecords.length} records missing`,
+      `Data coverage error: ${missingAreas.length} unknown, ${duplicateAreas.length} duplicate, ` +
+        `${uncoveredAreas.length} uncovered, ${missingRecords.length} records missing, ` +
+        `${invalidFeatures.length} invalid display features, ` +
+        `${invalidBoundaryFeatures.length} invalid boundaries, ` +
+        `${missingBoundaryLevels.length} boundary levels missing`,
     );
   }
 }
@@ -513,12 +637,17 @@ function showMapError(error) {
 }
 
 async function loadData() {
-  const urls = ["./hubei.geojson", "./data/geography.json", "./data/extracted/ben.json"];
+  const urls = [
+    "./data/display_areas_simplified.geojson",
+    "./data/admin_boundary.geojson",
+    "./data/geography.json",
+    "./data/extracted/ben.json",
+  ];
   const responses = await Promise.all(urls.map((url) => fetch(url)));
   responses.forEach((response, index) => {
     if (!response.ok) throw new Error(`Failed to load ${urls[index]}: ${response.status}`);
   });
-  [state.geojson, state.geography, state.dataset] = await Promise.all(
+  [state.geojson, state.boundaries, state.geography, state.dataset] = await Promise.all(
     responses.map((response) => response.json()),
   );
   state.features = state.geojson.features ?? [];
@@ -535,9 +664,12 @@ async function loadData() {
   elements.conceptSelect.append(conceptOption);
   elements.map.setAttribute(
     "aria-label",
-    `湖北省${conceptLabel}词形分布地图。使用方向键切换区划，按回车查看。`,
+    `湖北省${conceptLabel}词形分布地图。使用方向键切换显示区域，按回车查看。`,
   );
-  elements.mapStatus.textContent = `${state.features.length} 个现行县级区划`;
+  const customAreaCount = state.features.filter(
+    (feature) => feature.properties?.display_level === "custom",
+  ).length;
+  elements.mapStatus.textContent = `${state.features.length} 个显示区域（${customAreaCount} 个合并市区）`;
 
   if (document.fonts?.load) {
     const serifGlyphs = [
@@ -549,8 +681,8 @@ async function loadData() {
       .catch(() => undefined);
   }
 
-  const initialIndex = state.features.findIndex(
-    (feature) => state.areaByGb.get(String(feature.properties?.gb ?? ""))?.name === "武昌区",
+  const initialIndex = state.features.findIndex((feature) =>
+    displayAreaForFeature(feature).memberNames.includes("武昌区"),
   );
   state.selectedIndex = initialIndex >= 0 ? initialIndex : 0;
   state.highlightedIndex = state.selectedIndex;

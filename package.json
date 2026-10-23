@@ -1,0 +1,10 @@
+{
+  "name": "hubei-dialect-atlas",
+  "private": true,
+  "scripts": {
+    "build:geography": "python scripts/build_display_areas.py && mapshaper data/display_areas.geojson -simplify 20% keep-shapes -o format=geojson force data/display_areas_simplified.geojson && python scripts/build_admin_boundary.py"
+  },
+  "devDependencies": {
+    "mapshaper": "^0.7.97"
+  }
+}

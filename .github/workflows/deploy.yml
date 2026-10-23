@@ -31,7 +31,11 @@ jobs:
             publish/docs
 
           cp index.html app.js styles.css hubei.geojson publish/
-          cp data/geography.json publish/data/
+          cp \
+            data/geography.json \
+            data/display_areas_simplified.geojson \
+            data/admin_boundary.geojson \
+            publish/data/
           cp data/extracted/ben.json publish/data/extracted/
           cp docs/README.md publish/docs/
 

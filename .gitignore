@@ -15,6 +15,15 @@
 !/styles.css
 !/app.js
 !/hubei.geojson
+!/requirements.txt
+!/package.json
+!/package-lock.json
+
+# Reproducible geography build
+!/scripts/
+/scripts/*
+!/scripts/build_display_areas.py
+!/scripts/build_admin_boundary.py
 
 # Runtime font and its required license notice
 !/assets/
@@ -28,6 +37,10 @@
 !/data/
 /data/*
 !/data/geography.json
+!/data/display-groups.json
+!/data/display_areas.geojson
+!/data/display_areas_simplified.geojson
+!/data/admin_boundary.geojson
 !/data/extracted/
 /data/extracted/*
 !/data/extracted/ben.json

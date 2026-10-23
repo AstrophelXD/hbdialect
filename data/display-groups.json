@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "source": "../hubei.geojson",
+  "join_key": "properties.gb",
+  "groups": [
+    {
+      "display_id": "WUHAN_URBAN",
+      "display_name": "武汉市区",
+      "members": [
+        { "gb": "156420102", "name": "江岸区" },
+        { "gb": "156420103", "name": "江汉区" },
+        { "gb": "156420104", "name": "硚口区" },
+        { "gb": "156420105", "name": "汉阳区" },
+        { "gb": "156420106", "name": "武昌区" },
+        { "gb": "156420107", "name": "青山区" },
+        { "gb": "156420111", "name": "洪山区" }
+      ]
+    },
+    {
+      "display_id": "HUANGSHI_URBAN",
+      "display_name": "黄石市区",
+      "members": [
+        { "gb": "156420202", "name": "黄石港区" },
+        { "gb": "156420203", "name": "西塞山区" },
+        { "gb": "156420204", "name": "下陆区" },
+        { "gb": "156420205", "name": "铁山区" }
+      ]
+    },
+    {
+      "display_id": "SHIYAN_URBAN",
+      "display_name": "十堰市区",
+      "members": [
+        { "gb": "156420302", "name": "茅箭区" },
+        { "gb": "156420303", "name": "张湾区" }
+      ]
+    },
+    {
+      "display_id": "YICHANG_URBAN",
+      "display_name": "宜昌市区",
+      "members": [
+        { "gb": "156420502", "name": "西陵区" },
+        { "gb": "156420503", "name": "伍家岗区" },
+        { "gb": "156420504", "name": "点军区" },
+        { "gb": "156420505", "name": "猇亭区" }
+      ]
+    },
+    {
+      "display_id": "XIANGYANG_URBAN",
+      "display_name": "襄阳市区",
+      "members": [
+        { "gb": "156420602", "name": "襄城区" },
+        { "gb": "156420606", "name": "樊城区" }
+      ]
+    },
+    {
+      "display_id": "JINGMEN_URBAN",
+      "display_name": "荆门市区",
+      "members": [
+        { "gb": "156420802", "name": "东宝区" },
+        { "gb": "156420804", "name": "掇刀区" }
+      ]
+    },
+    {
+      "display_id": "JINGZHOU_URBAN",
+      "display_name": "荆州市区",
+      "members": [
+        { "gb": "156421002", "name": "沙市区" },
+        { "gb": "156421003", "name": "荆州区" }
+      ]
+    }
+  ]
+}

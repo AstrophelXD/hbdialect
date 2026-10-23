@@ -46,8 +46,8 @@
           </div>
           <div class="home-intro">
             <p>
-              本站整理湖北方言的语音、语汇、语法与地理资料。语汇栏目以现行县级区划为入口，
-              展示各地与当前词目对应的方言词形。
+              本站整理湖北方言的语音、语汇、语法与地理资料。语汇栏目以现行县级区划为基础，
+              按展示规则合并部分城区，呈现各地与当前词目对应的方言词形。
             </p>
             <a class="text-action" href="#vocabulary" data-view-link="vocabulary">查看语汇地图</a>
           </div>
@@ -57,7 +57,7 @@
           <article class="is-open">
             <span>语汇</span>
             <h2>词形分布地图</h2>
-            <p>1 个词目，103 个现行区划</p>
+            <p>1 个词目，87 个显示区域</p>
             <a href="#vocabulary" data-view-link="vocabulary">进入地图</a>
           </article>
           <article><span>概述</span><h2>湖北方言概览</h2><p>内容待整理</p></article>
@@ -69,50 +69,45 @@
 
       <section class="site-view vocabulary-view" id="vocabulary" data-view-panel="vocabulary" aria-labelledby="map-heading">
         <section class="atlas-shell" aria-labelledby="map-heading">
-          <div class="atlas-toolbar">
-            <div class="concept-control">
-              <label for="concept-select">当前词目</label>
-              <select id="concept-select" name="concept" aria-label="选择语汇词目">
-                <option value="ben">笨</option>
-              </select>
-            </div>
-
-            <form class="place-search" id="place-search-form" role="search">
-              <label class="sr-only" for="place-search-input">查找现行区县</label>
-              <span class="search-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
-              </span>
-              <input
-                id="place-search-input"
-                name="place"
-                type="search"
-                autocomplete="off"
-                placeholder="查找现行区县"
-              />
-              <button type="submit">查找</button>
-              <p class="search-message" id="search-message" aria-live="polite"></p>
-            </form>
-
-            <div class="legend" id="map-legend" aria-label="词形图例"></div>
-          </div>
-
           <div class="atlas-grid">
             <section class="map-panel" aria-labelledby="map-heading">
               <div class="map-heading-row">
-                <div>
-                  <p class="map-caption">现行县级区划</p>
-                  <h2 id="map-heading">湖北词形分布</h2>
+                <h2 id="map-heading">湖北词形分布</h2>
+                <div class="map-heading-tools">
+                  <div class="concept-control">
+                    <label for="concept-select">当前词目</label>
+                    <select id="concept-select" name="concept" aria-label="选择语汇词目">
+                      <option value="ben">笨</option>
+                    </select>
+                  </div>
+
+                  <form class="place-search" id="place-search-form" role="search">
+                    <label class="sr-only" for="place-search-input">查找显示区域或现行区县</label>
+                    <span class="search-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+                    </span>
+                    <input
+                      id="place-search-input"
+                      name="place"
+                      type="search"
+                      autocomplete="off"
+                      placeholder="查找显示区域或现行区县"
+                    />
+                    <button type="submit">查找</button>
+                    <p class="search-message" id="search-message" aria-live="polite"></p>
+                  </form>
                 </div>
-                <p id="map-status">正在读取地图…</p>
+                <p class="sr-only" id="map-status" aria-live="polite">正在读取地图…</p>
               </div>
 
               <div class="map-canvas" id="map-canvas">
+                <div class="legend map-legend-overlay" id="map-legend" aria-label="词形图例"></div>
                 <svg
                   id="hubei-map"
                   class="hubei-map"
                   viewBox="0 0 900 650"
                   role="group"
-                  aria-label="湖北省语汇词形分布地图。使用方向键切换区划，按回车查看。"
+                  aria-label="湖北省语汇词形分布地图。使用方向键切换显示区域，按回车查看。"
                 >
                   <text class="map-loading" x="450" y="320" text-anchor="middle">正在读取湖北地图…</text>
                 </svg>
@@ -122,15 +117,15 @@
               <div class="map-footnote">
                 <span class="info-icon" aria-hidden="true">i</span>
                 <p>
-                  点击任一现行区划，查看当前词目在该地对应的文献记录；同色区域表示相同词形，条带表示存在多种记录。
+                  点击任一显示区域，查看当前词目在该地对应的文献记录；条带表示合并区域内存在多种记录。细实线为县界，虚线为地市界，粗实线为省界。
                 </p>
               </div>
             </section>
 
             <aside class="detail-panel" aria-labelledby="detail-place">
               <div class="detail-title">
-                <p>现行区划</p>
-                <h2 id="detail-place">武昌区</h2>
+                <p id="detail-prefecture">武汉市</p>
+                <h2 id="detail-place">武汉市区</h2>
               </div>
 
               <div class="form-display">
